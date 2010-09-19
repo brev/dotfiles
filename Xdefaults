@@ -1,0 +1,11 @@
+rxvt*title:             Cygwin
+rxvt*background:        Grey15
+rxvt*foreground:        grey90
+rxvt*scrollBar_right:   true
+rxvt*colorBD:           1
+rxvt*font:              "Lucida Console-14"
+rxvt*saveLines:         10000
+rxvt.backspacekey:      ^?
+XTerm*saveLines:        5000
+XTerm*scrollBar:        true
+XTerm*rightScrollBar:   true

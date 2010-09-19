@@ -1,0 +1,21 @@
+
+###  client:nearlygod  app:brev
+
+Host brev.github.com
+  User git
+  HostName github.com
+  IdentityFile ~/.ssh/id_rsa_nearlygod_brev
+  IdentitiesOnly yes
+
+
+###  config
+
+ChallengeResponseAuthentication no
+HostbasedAuthentication no
+PasswordAuthentication no
+Port 22
+Protocol 2,1
+PubkeyAuthentication yes
+RhostsRSAAuthentication no
+RSAAuthentication no
+
