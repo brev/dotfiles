@@ -4,13 +4,11 @@
 export LS_COLORS="di=01;35"
 
 
-
 ### aliases
 
 alias grep='grep --color=auto'
 alias ls='ls --color=auto $LS_OPTIONS'
 alias vi='vim'
-
 
 
 ### ssh agent
