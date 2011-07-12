@@ -21,7 +21,7 @@ function start_agent {
   echo succeeded
   chmod 600 "${SSH_ENV}"
   . "${SSH_ENV}" > /dev/null
-  ssh-add "$HOME/.ssh/id_rsa_nearlygod_brev"
+  ssh-add "$HOME/.ssh/id_rsa_ORIGIN_TARGET"
 }
 
 # Source SSH settings, if applicable
