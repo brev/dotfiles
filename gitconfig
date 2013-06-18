@@ -1,0 +1,12 @@
+[user]
+	name = Brev Patterson
+	email = me@brev.name
+
+[github]
+	user = brev
+	token =
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
