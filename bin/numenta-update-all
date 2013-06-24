@@ -1,0 +1,43 @@
+#!/bin/sh
+
+WHICH="/usr/bin/which"
+GIT=`$WHICH git`
+LS=`$WHICH ls`
+TPUT=`$WHICH tput`
+
+BASE="$HOME/nta"
+START=$PWD
+REPOS=`$LS -1 $BASE`
+
+function print_exec {
+	if [ $TPUT ]; then
+		echo "$($TPUT setaf 1)>>>$($TPUT sgr0) $1"
+	else
+		echo ">>> $1"
+	fi
+	$1
+}
+
+print_exec "cd $BASE"
+
+for REPO in $REPOS
+do
+	if [ -d "$BASE/$REPO/.git/" ]; then
+		print_exec "cd $REPO"
+		print_exec "ls"
+		print_exec "$GIT pull"
+
+		BRANCH=`$GIT rev-parse --abbrev-ref HEAD`
+		if [ $BRANCH != "master" ]; then
+			print_exec "$GIT stash"
+			print_exec "$GIT checkout master"
+			print_exec "$GIT pull"
+			print_exec "$GIT checkout $BRANCH"
+			print_exec "$GIT stash pop"
+		fi
+
+		print_exec "cd $BASE"
+	fi
+done
+
+print_exec "cd $START"

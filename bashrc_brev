@@ -1,13 +1,12 @@
 ### exports
 
 export CLICOLOR=1
-export PATH=$PATH:/usr/local/share/npm/bin
+unset LSCOLORS
+export PATH=$PATH:/usr/local/share/npm/bin:~/bin
 
 ### aliases
 
 alias grep='grep --color=auto'
-alias solarized-light='osascript -e "tell application \"Terminal\" to set current settings of selected tab of front window to first settings set whose name is \"Solarized Light\""'
-alias solarized-dark='osascript -e "tell application \"Terminal\" to set current settings of selected tab of front window to first settings set whose name is \"Solarized Dark\""'
 
 ### other
 
@@ -18,4 +17,4 @@ fi
 
 ### prompt
 
-export PS1='[\h \W$(__git_ps1 " (%s)")]\$ '
+export PS1='[\h \w$(__git_ps1 " (%s)")]\$ '
