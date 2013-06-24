@@ -1,43 +1,137 @@
 #!/bin/sh
 
 WHICH="/usr/bin/which"
-GIT=`$WHICH git`
-LS=`$WHICH ls`
-TPUT=`$WHICH tput`
 
-BASE="$HOME/nta"
-START=$PWD
-REPOS=`$LS -1 $BASE`
+CD=cd
+CUT=$($WHICH cut)
+DATE=$($WHICH date)
+GIT=$($WHICH git)
+GREP=$($WHICH grep)
+JPS=$($WHICH jps)
+KILL=$($WHICH kill)
+LN=$($WHICH ln)
+LS=$($WHICH ls)
+MAKE=$($WHICH make)
+MKDIR=$($WHICH mkdir)
+NOHUP=$($WHICH nohup)
+NS=$($WHICH nupic-services.py)
+OPEN=$($WHICH open)
+PS=$($WHICH ps)
+PYTH=$($WHICH python)
+RM=$($WHICH rm)
+TPUT=$($WHICH tput)
+
+API_DIR="grok-api-server"
+APP_DIR="grok-app"
+NTA_ROOT="$HOME/nta"
 
 function print_exec {
-	if [ $TPUT ]; then
-		echo "$($TPUT setaf 1)>>>$($TPUT sgr0) $1"
-	else
-		echo ">>> $1"
-	fi
+	echo "$($TPUT setaf 4)>>> $1$($TPUT sgr0)"
 	$1
 }
 
-print_exec "cd $BASE"
+echo "\nStarting... ===================================================="
+echo $($DATE)
 
+
+### Stop web stack
+
+print_exec "$APP_DIR/bin/stop-unified-web.sh"
+
+
+### Stop API server
+
+API_PS=$($PS -e -o pid,command | $GREP "grokapi.webapi" | $GREP -v grep | $CUT -d " " -f1)
+if [ "$API_PS" ]; then
+	print_exec "$KILL $API_PS"
+fi
+
+
+### Stop Engine
+
+print_exec "$JPS"
+print_exec "$NS stop"
+print_exec "$KILL -9 `$JPS | $CUT -d ' ' -f1`"
+print_exec "$JPS"
+
+
+### Update all git repos
+
+print_exec "$CD $NTA_ROOT/"
+
+REPOS=$($LS -1 $NTA_ROOT)
 for REPO in $REPOS
 do
-	if [ -d "$BASE/$REPO/.git/" ]; then
-		print_exec "cd $REPO"
-		print_exec "ls"
+	if [ -d "$NTA_ROOT/$REPO/.git/" ]; then
+		print_exec "$CD $REPO/"
 		print_exec "$GIT pull"
+		print_exec "$GIT submodule update"
 
-		BRANCH=`$GIT rev-parse --abbrev-ref HEAD`
-		if [ $BRANCH != "master" ]; then
+		BRANCH=$($GIT rev-parse --abbrev-ref HEAD)
+		if [ "$BRANCH" != "master" ]; then
 			print_exec "$GIT stash"
 			print_exec "$GIT checkout master"
 			print_exec "$GIT pull"
+			print_exec "$GIT submodule update"
 			print_exec "$GIT checkout $BRANCH"
 			print_exec "$GIT stash pop"
 		fi
 
-		print_exec "cd $BASE"
+		print_exec "$CD $NTA_ROOT/"
 	fi
 done
 
-print_exec "cd $START"
+
+### Engine full build
+
+print_exec "$CD $NUPIC/build_system/"
+
+print_exec "$PYTH setup.py --autogen"
+print_exec "$MKDIR $NTA_ROOT/build/"
+print_exec "$CD $NTA_ROOT/build/"
+print_exec "$RM -Rf $NTA_ROOT/build/*"
+print_exec "$NUPIC/configure"
+print_exec "$MAKE"
+print_exec "$MAKE install"
+print_exec "$CD $NTA_ROOT/"
+print_exec "$LN -s eng current"
+
+print_exec "$CD $NTA_ROOT/"
+
+
+### Engine incremental build
+
+print_exec "$CD $TRUNK/"
+print_exec "./build_system/build_engine.sh $TRUNK/ $NTA_ROOT/eng/"
+print_exec "$CD $NTA_ROOT/"
+
+
+### Start Engine
+
+print_exec "$JPS"
+print_exec "$NS --hardReset"
+print_exec "$NS start"
+print_exec "$JPS"
+
+
+### Start API server
+
+print_exec "$CD $API_DIR/"
+print_exec "$NOHUP $PYTH -m grokapi.webapi 8081 &>/dev/null </dev/null &"
+print_exec "$CD $NTA_ROOT/"
+
+
+### Build and start web stack
+
+print_exec "$APP_DIR/bin/bounce-unified-web.sh -b"
+
+
+### Show the results
+
+print_exec "$OPEN http://localhost:8081/"
+print_exec "$OPEN https://localhost/"
+
+
+echo "\nFinished. ===================================================="
+echo $($DATE)
+echo
