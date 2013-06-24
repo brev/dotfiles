@@ -1,0 +1,32 @@
+#!/bin/sh
+
+WHICH = "/usr/bin/which"
+GIT = `$WITCH git`
+
+BASE = "~/nta"
+START = $PWD
+REPOS = `/bin/ls -1 $BASE`
+
+cd $BASE
+
+for REPO in $REPOS
+do
+	cd $REPO
+
+	if [ -d ".git" ]; then
+		$GIT pull
+
+		BRANCH = `$GIT rev-parse --abbrev-ref HEAD`
+		if [ $BRANCH != "master"]; then
+			$GIT stash
+			$GIT checkout master
+			$GIT pull
+			$GIT checkout $BRANCH
+			$GIT stash pop
+		fi
+	fi
+
+	cd ..
+done
+
+cd $START
