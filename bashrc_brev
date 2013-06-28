@@ -1,8 +1,8 @@
 ### exports
 
 export CLICOLOR=1
-unset LSCOLORS
 export PATH=$PATH:/usr/local/share/npm/bin:~/bin
+unset LSCOLORS
 
 ### aliases
 
@@ -23,13 +23,17 @@ alias gpush='git push'
 alias grm='git rm'
 alias gs='git status'
 
+### prompt
+
+export PS1='[\h \W$(__git_ps1 " (%s)")]\$ '
+
+### mac os x
+
+defaults write com.sublimetext.2 ApplePressAndHoldEnabled -bool false
+
 ### other
 
 # Git bash completion
 if [ -f `/usr/local/bin/brew --prefix`/etc/bash_completion ]; then
 	. `/usr/local/bin/brew --prefix`/etc/bash_completion
 fi
-
-### prompt
-
-export PS1='[\h \W$(__git_ps1 " (%s)")]\$ '
