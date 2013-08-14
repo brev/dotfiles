@@ -2,7 +2,9 @@
 
 export CLICOLOR=1
 export PATH=$PATH:/usr/local/share/npm/bin:~/bin
+
 unset LSCOLORS
+
 
 ### aliases
 
@@ -23,14 +25,17 @@ alias gpush='git push'
 alias grm='git rm'
 alias gs='git status'
 
+
 ### prompt
 
-export PS1='[\h \e[0;34m\W\e[m$(__git_ps1 " (%s)")]\$ '
+export PS1='[\h \W$(__git_ps1 " (%s)")]\$ '
+
 
 ### mac os x
 
 defaults write com.sublimetext ApplePressAndHoldEnabled -bool false
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+
 
 ### other
 
