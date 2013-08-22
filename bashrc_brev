@@ -25,6 +25,8 @@ alias gpush='git push'
 alias grm='git rm'
 alias gs='git status'
 
+alias merc='cd ~/nta/mercury/mercury-app/'
+
 
 ### prompt
 
