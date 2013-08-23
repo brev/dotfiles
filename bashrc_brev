@@ -28,7 +28,7 @@ alias gs='git status'
 
 ### prompt
 
-export PS1='│ \h: \w$(__git_ps1 "\r\n│ (%s)")\r\n│ \$ '
+export PS1='╭ \h $(__git_ps1 "(%s) ")\w\r\n╰ \$ '
 
 
 ### mac os x
