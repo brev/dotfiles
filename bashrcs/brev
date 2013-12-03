@@ -28,7 +28,7 @@ alias gs='git status'
 
 
 ### prompt
-
+alias __git_ps1=echo ### TBD:remove
 export PS1='╭ \h \w$(__git_ps1 " (%s)")\r\n╰ \$ '
 
 
@@ -41,6 +41,8 @@ defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 ### other
 
 # Git bash completion
-if [ -f `/usr/local/bin/brew --prefix`/etc/bash_completion ]; then
+if [ -f /usr/local/bin/brew ]; then
+  if [ -f `/usr/local/bin/brew --prefix`/etc/bash_completion ]; then
 	. `/usr/local/bin/brew --prefix`/etc/bash_completion
+  fi
 fi
