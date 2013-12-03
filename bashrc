@@ -1,1 +1,1 @@
-source ~/.dotfiles/bashrcs/*
+source ~/src/dotfiles/bashrcs/*

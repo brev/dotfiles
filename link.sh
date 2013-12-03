@@ -1,5 +1,5 @@
 #/bin/bash
-for FILE in bashrc inputrc profile
+for FILE in bashrc gitconfig inputrc profile
 do
-	ln -f -s ~/.dotfiles/$FILE ~/.$FILE
+	ln -f -s ~/src/dotfiles/$FILE ~/.$FILE
 done
