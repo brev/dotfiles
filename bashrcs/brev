@@ -1,3 +1,6 @@
+echo "bashrc::brev"
+
+
 ### exports
 
 export CLICOLOR=1
