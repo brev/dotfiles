@@ -1,2 +1,5 @@
 echo "bashrc"
-source ~/src/dotfiles/bashrcs/*
+
+for F in $HOME/src/dotfiles/bashrcs/*; do
+  source $F;
+done

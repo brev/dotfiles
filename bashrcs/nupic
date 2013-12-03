@@ -5,5 +5,5 @@ export NUPIC=$HOME/src/nupic
 export BUILDDIR=/tmp/ntabuild
 export MK_JOBS=3
 
-source $NUPIC/env.sh
-source $HOME/src/nupic-darwin64/bin/activate
+source $NUPIC/env.sh > /dev/null
+source $HOME/src/nupic-darwin64/bin/activate > /dev/null
