@@ -7,12 +7,21 @@ if [ $(ssh-add -l | grep -c "The agent has no identities." ) -eq 1 ]; then
 fi
 
 
-### exports
+### path
+
+export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:$PATH
+
+
+### prompt
+
+export PS1='╭ \h \w$(__git_ps1 " (%s)")\r\n╰ \$ '
+
+
+### other exports
 
 export CLICOLOR=1
 export EDITOR='subl -w'
-export PATH=$PATH:/usr/local/share/npm/bin:~/bin
-export PS1='╭ \h \w$(__git_ps1 " (%s)")\r\n╰ \$ '
+export RBENV_ROOT=/usr/local/var/rbenv
 
 unset LSCOLORS
 
