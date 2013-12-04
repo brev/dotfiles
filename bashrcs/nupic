@@ -3,5 +3,7 @@ export NUPIC=$HOME/src/nupic
 export BUILDDIR=/tmp/ntabuild
 export MK_JOBS=3
 
+#export CXX=/usr/local/bin/g++-4.7
+
 source $NUPIC/env.sh > /dev/null
-#source $HOME/src/nupic-darwin64/bin/activate > /dev/null
+source $HOME/src/nupic-darwin64/bin/activate > /dev/null

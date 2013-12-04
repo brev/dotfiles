@@ -1,13 +1,25 @@
+### ssh ident
+
+if [ $(ssh-add -l | grep -c "The agent has no identities." ) -eq 1 ]; then
+  if [ -f /mach_kernel ]; then
+    ssh-add -k
+ fi
+fi
+
+
 ### exports
 
 export CLICOLOR=1
 export EDITOR='subl -w'
 export PATH=$PATH:/usr/local/share/npm/bin:~/bin
+export PS1='╭ \h \w$(__git_ps1 " (%s)")\r\n╰ \$ '
 
 unset LSCOLORS
 
 
 ### aliases
+
+alias terminal-speedup='sudo rm /private/var/log/asl/*.asl'
 
 alias grep='grep --color=auto'
 
@@ -27,20 +39,14 @@ alias grm='git rm'
 alias gs='git status'
 
 
-### prompt
-alias __git_ps1=echo ### TBD:remove
-export PS1='╭ \h \w$(__git_ps1 " (%s)")\r\n╰ \$ '
-
-
 ### mac os x
 
 defaults write com.sublimetext ApplePressAndHoldEnabled -bool false
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 
 
-### other
+### git shell autocomplete
 
-# Git bash completion
 if [ -f /usr/local/bin/brew ]; then
   if [ -f `/usr/local/bin/brew --prefix`/etc/bash_completion ]; then
 	. `/usr/local/bin/brew --prefix`/etc/bash_completion

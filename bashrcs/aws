@@ -1,0 +1,9 @@
+export AWS_CREDENTIAL_FILE=$HOME/.aws/aws_cred
+export AWS_ACCESS_KEY_ID=`grep -i AWSAccessKeyID $AWS_CREDENTIAL_FILE | tail -1 | awk -F= '{print $2}'`
+export AWS_SECRET_ACCESS_KEY=`grep -i AWSSecretKey $AWS_CREDENTIAL_FILE | tail -1 | awk -F= '{print $2}'`
+
+function aws_key { echo "$AWS_ACCESS_KEY_ID" | pbcopy; }
+function aws_secret { echo "$AWS_SECRET_ACCESS_KEY" | pbcopy; }
+
+export -f aws_key
+export -f aws_secret
