@@ -10,3 +10,12 @@
 	branch = auto
 	diff = auto
 	status = auto
+
+[core]
+excludesfile = /opt/boxen/config/git/gitignore
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
+
+[hub]
+protocol = https
