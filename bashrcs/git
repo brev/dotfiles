@@ -1,0 +1,26 @@
+# aliases
+
+alias ga='git add'
+alias gb='git branch'
+alias gcheck='git checkout'
+alias gclone='git clone'
+alias gcom='git commit'
+alias gd='git diff'
+alias gf='git fetch'
+alias gl='git log'
+alias gmerge='git merge'
+alias gmv='git mv'
+alias gpull='git pull'
+alias gpush='git push'
+alias grm='git rm'
+alias grv='git remote -v'
+alias gs='git status'
+
+
+# shell autocomplete
+
+if [ -f /usr/local/bin/brew ]; then
+  if [ -f `/usr/local/bin/brew --prefix`/etc/bash_completion ]; then
+	. `/usr/local/bin/brew --prefix`/etc/bash_completion
+  fi
+fi
