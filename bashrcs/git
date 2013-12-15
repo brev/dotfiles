@@ -1,4 +1,4 @@
-# aliases
+# git aliases
 
 alias ga='git add'
 alias gb='git branch'
@@ -17,10 +17,13 @@ alias grv='git remote -v'
 alias gs='git status'
 
 
-# shell autocomplete
+# git shell autocomplete
 
-if [ -f /usr/local/bin/brew ]; then
-  if [ -f `/usr/local/bin/brew --prefix`/etc/bash_completion ]; then
-	. `/usr/local/bin/brew --prefix`/etc/bash_completion
-  fi
+GIT_CORE=/Applications/Xcode.app/Contents/Developer/usr/share/git-core
+
+if [ -f $GIT_CORE/git-completion.bash ]; then
+    . $GIT_CORE/git-completion.bash
 fi
+
+source $GIT_CORE/git-prompt.sh
+
