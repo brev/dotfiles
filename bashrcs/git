@@ -17,6 +17,36 @@ alias grv='git remote -v'
 alias gs='git status'
 
 
+# git shell functions (advanced aliases)
+
+function gupdates {
+    for INDEX in \
+        "checkout master"       \
+        "fetch origin"          \
+        "fetch upstream"        \
+        "pull origin master"    \
+        "pull upstream master"  ;
+    do
+        echo ">>> git $INDEX"
+        git $INDEX
+    done
+}
+
+function gdiffs {
+    for INDEX in \
+        "diff master origin/master"             \
+        "diff master upstream/master"           \
+        "diff origin/master upstream/master"    ;
+    do
+        echo ">>> git $INDEX"
+        git $INDEX
+    done
+}
+
+export -f gupdates
+export -f gdiffs
+
+
 # git shell autocomplete
 
 GIT_CORE=/Applications/Xcode.app/Contents/Developer/usr/share/git-core
