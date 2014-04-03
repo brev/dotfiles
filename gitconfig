@@ -1,21 +1,19 @@
 [user]
-	name = Brev Patterson
-	email = me@brev.name
+name = Brev Patterson
+email = me@brev.name
 
 [github]
-	user = brev
-	token =
+user = brev
+token =
 
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+branch = auto
+diff = auto
+status = auto
 
 [core]
-excludesfile = /opt/boxen/config/git/gitignore
 
 [credential]
-helper = /opt/boxen/bin/boxen-git-credential
 
 [hub]
 protocol = https

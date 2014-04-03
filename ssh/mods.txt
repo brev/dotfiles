@@ -1,3 +1,0 @@
-ln -s $HOME/.ssh/authorized_keys $HOME/.ssh/authorized_keys2
-chmod 700 $HOME/.ssh
-chmod 644 $HOME/.ssh/authorized_keys
