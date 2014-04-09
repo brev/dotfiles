@@ -1,4 +1,5 @@
-export NTA=$HOME/lib/nupic
+export NTA=$HOME/Library/nupic
+export NTA_ROOT_DIR=$NTA
 export NUPIC=$HOME/src/nupic
 
-source $NUPIC/env.sh > /dev/null
+export PYTHONPATH=$PYTHONPATH:$NTA/lib/python2.7/site-packages:$HOME/Library/Python/2.7/lib/python/site-packages
