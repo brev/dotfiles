@@ -1,6 +1,6 @@
 ### path
 
-export PATH=/System/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/System/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 
 ### exports
