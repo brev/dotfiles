@@ -18,6 +18,9 @@ unset LSCOLORS
 alias grep='grep --color=auto'
 alias terminal-speedup='sudo rm /private/var/log/asl/*.asl'
 
+alias g='cd ~/src/projects/grok'
+alias n='cd ~/src/numenta.com'
+
 
 ### mac os x
 
