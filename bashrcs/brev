@@ -16,7 +16,7 @@ unset LSCOLORS
 ### aliases
 
 # dir quick shortcuts
-alias g='cd ~/src/projects/grok'
+alias g='cd ~/src/products/grok'
 alias n='cd ~/src/numenta.com'
 
 # git helper for numenta.com
