@@ -6,4 +6,4 @@ export PYTHONPATH=$PYTHONPATH:$NTA/lib/python2.7/site-packages:/usr/local/lib/py
 export ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future
 export CFLAGS=-Qunused-arguments
 export CPPFLAGS=-Qunused-arguments
-export MACOSX_DEPLOYMENT_TARGET=10.9
+export MACOSX_DEPLOYMENT_TARGET=10.10
