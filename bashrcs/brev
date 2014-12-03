@@ -20,7 +20,7 @@ alias g='cd ~/src/products/grok'
 alias n='cd ~/src/numenta.com'
 
 # git helper for numenta.com
-alias gso='git status | grep -v out'
+alias gso='git status | grep -v out/'
 
 # general
 alias grep='grep --color=auto'
