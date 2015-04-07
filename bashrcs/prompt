@@ -1,3 +1,0 @@
-### prompt
-
-export PS1='╭ \h \w$(__git_ps1 " (%s)")\r\n╰ \$ '

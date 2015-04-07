@@ -7,8 +7,5 @@ export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_KEY
 export EC2_HOME=/usr/local/lib/ec2-api-tools
 export PATH=$PATH:$EC2_HOME/bin
 
-function aws_key { echo "$AWS_ACCESS_KEY_ID" | pbcopy; }
-function aws_secret { echo "$AWS_SECRET_ACCESS_KEY" | pbcopy; }
-
-export -f aws_key
-export -f aws_secret
+function aws_key () { echo "$AWS_ACCESS_KEY_ID" | pbcopy; }
+function aws_secret () { echo "$AWS_SECRET_ACCESS_KEY" | pbcopy; }

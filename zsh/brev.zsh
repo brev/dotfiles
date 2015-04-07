@@ -18,9 +18,7 @@ unset LSCOLORS
 # dir quick shortcuts
 alias g='cd ~/src/products/grok'
 alias n='cd ~/src/numenta.com'
-
-# git helper for numenta.com
-alias gso='git status | grep -v out/'
+alias o='cd ~/src/numenta.org'
 
 # general
 alias grep='grep --color=auto'
@@ -32,11 +30,8 @@ alias psd='open -a /Applications/Adobe\ Photoshop\ CC\ 2014/Adobe\ Photoshop\ CC
 
 ### mac os x
 
-#sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-#defaults write com.apple.Finder AppleShowAllFiles -bool true
-#defaults write com.apple.finder AppleShowAllFiles TRUE
 defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.sublimetext ApplePressAndHoldEnabled -bool false
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
