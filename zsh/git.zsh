@@ -21,25 +21,29 @@ alias gso='git status | grep -v out/'
 # git shell functions (advanced aliases)
 
 function gupdates () {
-  for INDEX in \
-    "checkout master"       \
-    "fetch origin"          \
-    "fetch upstream"        \
-    "pull origin master"    \
-    "pull upstream master"  ;
-  do
-    echo ">>> git $INDEX"
-    git $INDEX
+  CMDS=(                        \
+    'git checkout master'       \
+    'git fetch origin'          \
+    'git fetch upstream'        \
+    'git pull origin master'    \
+    'git pull upstream master'  \
+  )
+
+  for INDEX in $CMDS; do
+    echo ">>> $INDEX"
+    eval ${INDEX}
   done
 }
 
 function gdiffs () {
-  for INDEX in \
-    "diff master origin/master"             \
-    "diff master upstream/master"           \
-    "diff origin/master upstream/master"    ;
-  do
-    echo ">>> git $INDEX"
-    git $INDEX
+  CMDS=(                                      \
+    'git diff master origin/master'           \
+    'git diff master upstream/master'         \
+    'git diff origin/master upstream/master'  \
+  )
+
+  for INDEX in $CMDS; do
+    echo ">>> $INDEX"
+    eval ${INDEX}
   done
 }
