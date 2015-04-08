@@ -1,3 +1,9 @@
+# git config
+
+#git config --global pager.<command> false
+git config --global pager.diff false
+
+
 # git aliases
 
 alias ga='git add'
@@ -5,7 +11,7 @@ alias gb='git branch'
 alias gcheck='git checkout'
 alias gclone='git clone'
 alias gcom='git commit'
-alias gd='git --no-pager diff'
+alias gd='git diff'
 alias gf='git fetch'
 alias gl='git log'
 alias gmerge='git merge'
