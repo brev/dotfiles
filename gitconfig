@@ -17,3 +17,5 @@ status = auto
 
 [hub]
 protocol = https
+[pager]
+	diff = false
