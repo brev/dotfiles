@@ -36,5 +36,5 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.sublimetext ApplePressAndHoldEnabled -bool false
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-defaults write NSGlobalDomain InitialKeyRepeat -int 10  # default 15
+defaults write NSGlobalDomain InitialKeyRepeat -int 14  # default 15
 defaults write NSGlobalDomain KeyRepeat -int 1          # default 2
