@@ -1,7 +1,7 @@
 # git config
 
 #git config --global pager.<command> false
-#git config --global pager.diff false
+git config --global pager.diff true
 
 
 # git aliases
