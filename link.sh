@@ -5,7 +5,7 @@ do
 	ln -f -s ~/src/dotfiles/$FILE ~/.$FILE
 done
 
-for DIR in iterm2 sublime
+for DIR in atom iterm2
 do
   cd $DIR
   ./link.sh

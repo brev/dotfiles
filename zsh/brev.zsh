@@ -6,7 +6,7 @@ export PATH=/System/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/lo
 ### exports
 
 export CLICOLOR=1
-export EDITOR='subl -w'
+export EDITOR=atom
 export JAVA_HOME=$(/usr/libexec/java_home)
 export RBENV_ROOT=/usr/local/var/rbenv
 

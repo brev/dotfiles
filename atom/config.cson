@@ -1,0 +1,30 @@
+"*":
+  editor:
+    invisibles: {}
+    fontFamily: "Menlo"
+    showIndentGuide: true
+  core:
+    audioBeep: false
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
+    disabledPackages: [
+      "styleguide"
+      "language-clojure"
+      "language-csharp"
+      "language-go"
+      "language-java"
+      "language-less"
+      "language-objective-c"
+      "language-perl"
+      "language-php"
+      "language-ruby"
+      "language-ruby-on-rails"
+    ]
+  "exception-reporting":
+    userId: "88838393-5dc9-aff0-337c-cfa8b8b7370a"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "b41e910c48c82373ed1dc8738d1b95370494448d"
