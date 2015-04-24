@@ -19,3 +19,5 @@ status = auto
 protocol = https
 [pager]
 	diff = true
+[core]
+	editor = atom --wait

@@ -3,6 +3,7 @@
     invisibles: {}
     fontFamily: "Menlo"
     showIndentGuide: true
+    lineHeight: 1.33
   core:
     audioBeep: false
     themes: [
@@ -21,6 +22,7 @@
       "language-php"
       "language-ruby"
       "language-ruby-on-rails"
+      "tree-view"
     ]
   "exception-reporting":
     userId: "88838393-5dc9-aff0-337c-cfa8b8b7370a"
