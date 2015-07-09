@@ -1,9 +1,11 @@
 "*":
   editor:
-    invisibles: {}
     fontFamily: "Menlo"
-    showIndentGuide: true
+    invisibles: {}
     lineHeight: 1.33
+    showIndentGuide: true
+    softWrap: false
+    fontSize: 16
   core:
     audioBeep: false
     themes: [
