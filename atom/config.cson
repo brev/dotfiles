@@ -32,3 +32,4 @@
     showOnStartup: false
   metrics:
     userId: "b41e910c48c82373ed1dc8738d1b95370494448d"
+  "vim-mode": {}
