@@ -1,11 +1,4 @@
 "*":
-  editor:
-    fontFamily: "Menlo"
-    invisibles: {}
-    lineHeight: 1.33
-    showIndentGuide: true
-    softWrap: false
-    fontSize: 16
   core:
     audioBeep: false
     themes: [
@@ -26,10 +19,21 @@
       "language-ruby-on-rails"
       "tree-view"
     ]
+  editor:
+    fontFamily: "Menlo"
+    fontSize: 16
+    invisibles: {}
+    lineHeight: 1.36
+    showIndentGuide: true
+    softWrap: false
+    softWrapped: false
   "exception-reporting":
     userId: "88838393-5dc9-aff0-337c-cfa8b8b7370a"
-  welcome:
-    showOnStartup: false
   metrics:
     userId: "b41e910c48c82373ed1dc8738d1b95370494448d"
   "vim-mode": {}
+  whitespace:
+    ensureSingleTrailingNewline: true
+    removeTrailingWhitespace: true
+  welcome:
+    showOnStartup: false
