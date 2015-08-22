@@ -16,10 +16,9 @@ unset LSCOLORS
 ### aliases
 
 # dir quick shortcuts
-alias f='cd ~/src/fluxible-test'
-alias g='cd ~/src/products/grok'
 alias n='cd ~/src/numenta.com'
 alias o='cd ~/src/numenta.org'
+alias u='cd ~/src/numenta-apps/unicorn/'
 
 # general
 alias grep='grep --color=auto'
