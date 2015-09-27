@@ -1,10 +1,7 @@
 export NUPIC=$HOME/src/nupic
 
-#export ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future
-export ARCHFLAGS="-arch x86_64"
 export CFLAGS=-Qunused-arguments
 export CPPFLAGS=-Qunused-arguments
-export MACOSX_DEPLOYMENT_TARGET=10.10
 
 # https://github.com/numenta/nupic/wiki/Numenta-Developer-Setup
 export PATH=${HOME}/Library/Python/local:${PATH}
