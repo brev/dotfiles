@@ -7,4 +7,4 @@ export CPPFLAGS=-Qunused-arguments
 export PATH=${HOME}/Library/Python/local:${PATH}
 export PYTHONPATH=${HOME}/Library/Python/local/lib/python2.7/site-packages:${PYTHONPATH}
 export DYLD_LIBRARY_PATH=${HOME}/Library/Python/local/lib:${DYLD_LIBRARY_PATH}
-export MANPATH=${HOME}/Library/Python/local/man
+export MANPATH=${HOME}/Library/Python/local/man:${MANPATH}

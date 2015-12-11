@@ -37,3 +37,4 @@
     removeTrailingWhitespace: true
   welcome:
     showOnStartup: false
+  "vim-mode-plus": {}
