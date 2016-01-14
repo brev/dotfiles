@@ -8,6 +8,7 @@ export PATH=/System/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/lo
 export CLICOLOR=1
 export EDITOR=atom
 export JAVA_HOME=$(/usr/libexec/java_home)
+export KEYTIMEOUT=1
 export RBENV_ROOT=/usr/local/var/rbenv
 
 unset LSCOLORS
