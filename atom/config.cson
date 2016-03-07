@@ -1,10 +1,6 @@
 "*":
   core:
     audioBeep: false
-    themes: [
-      "one-light-ui"
-      "solarized-light-syntax"
-    ]
     disabledPackages: [
       "styleguide"
       "language-clojure"
@@ -19,22 +15,26 @@
       "language-ruby-on-rails"
       "tree-view"
     ]
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
   editor:
     fontFamily: "Menlo"
     fontSize: 16
     invisibles: {}
     lineHeight: 1.36
     showIndentGuide: true
-    softWrap: false
     softWrapped: false
   "exception-reporting":
     userId: "88838393-5dc9-aff0-337c-cfa8b8b7370a"
   metrics:
     userId: "b41e910c48c82373ed1dc8738d1b95370494448d"
   "vim-mode": {}
-  whitespace:
-    ensureSingleTrailingNewline: true
-    removeTrailingWhitespace: true
+  "vim-mode-plus": {}
   welcome:
     showOnStartup: false
-  "vim-mode-plus": {}
+  whitespace:
+    ensureSingleTrailingNewline: true
+    ignoreWhitespaceOnCurrentLine: false
+    removeTrailingWhitespace: true

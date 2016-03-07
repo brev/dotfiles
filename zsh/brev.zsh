@@ -40,3 +40,9 @@ defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write NSGlobalDomain InitialKeyRepeat -int 14  # default 15
 defaults write NSGlobalDomain KeyRepeat -int 1          # default 2
+
+
+### nvm
+
+export NVM_DIR=~/.nvm
+. $(brew --prefix nvm)/nvm.sh

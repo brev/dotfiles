@@ -14,6 +14,7 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/git
   zgen oh-my-zsh plugins/github
   zgen oh-my-zsh plugins/osx
+  zgen oh-my-zsh plugins/node
   zgen oh-my-zsh plugins/pip
   zgen oh-my-zsh plugins/python
   zgen oh-my-zsh plugins/sudo
@@ -23,7 +24,6 @@ if ! zgen saved; then
   zgen load caiogondim/bullet-train-oh-my-zsh-theme bullet-train
   zgen load chrissicool/zsh-256color
   zgen load clauswitt/zsh-grunt-plugin
-  zgen load poying/zsh-nodejs-plugin
   zgen load sharat87/pip-app
   zgen load zsh-users/zsh-completions src
   zgen load zsh-users/zsh-syntax-highlighting
