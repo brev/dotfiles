@@ -18,10 +18,9 @@ unset LSCOLORS
 ### aliases
 
 # dir quick shortcuts
-alias n='cd ~/src/numenta.com/'
-alias o='cd ~/src/numenta.org/'
-alias u='cd ~/src/numenta-apps/unicorn/'
-alias w='cd ~/src/wilco-htm/'
+alias n='cd ~/src/numenta-web/numenta.com/'
+alias o='cd ~/src/numenta-web/numenta.org/'
+alias s='cd ~/src/numenta-web/shared/'
 
 # general
 alias grep='grep --color=auto'
