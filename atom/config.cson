@@ -14,6 +14,16 @@
       "language-ruby"
       "language-ruby-on-rails"
       "tree-view"
+      "linter-csslint"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "node_modules"
     ]
     themes: [
       "one-light-ui"
@@ -28,10 +38,28 @@
     softWrapped: false
   "exception-reporting":
     userId: "88838393-5dc9-aff0-337c-cfa8b8b7370a"
+  "highlight-line": {}
+  linter: {}
+  "linter-stylelint":
+    enableHtmlLinting: true
   metrics:
     userId: "b41e910c48c82373ed1dc8738d1b95370494448d"
+  "one-light-ui": {}
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "text.html.mustache"
+      "source.js.jsx"
+      "source.json"
+      "source.gfm"
+    ]
   "vim-mode": {}
   "vim-mode-plus": {}
+  "webbox-color": {}
   welcome:
     showOnStartup: false
   whitespace:
