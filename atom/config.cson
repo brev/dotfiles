@@ -13,8 +13,8 @@
       "language-php"
       "language-ruby"
       "language-ruby-on-rails"
+      "rename-tabs"
       "tree-view"
-      "linter-csslint"
     ]
     ignoredNames: [
       ".git"
@@ -25,6 +25,7 @@
       "Thumbs.db"
       "node_modules"
     ]
+    telemetryConsent: "limited"
     themes: [
       "one-light-ui"
       "solarized-light-syntax"
@@ -42,6 +43,8 @@
   linter: {}
   "linter-stylelint":
     enableHtmlLinting: true
+  "file-header":
+    numOfEmptyLinesAfterNewHeader: 1
   metrics:
     userId: "b41e910c48c82373ed1dc8738d1b95370494448d"
   "one-light-ui": {}
