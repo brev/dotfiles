@@ -45,5 +45,4 @@ brew 'xz'
 brew 'zsh'
 
 cask 'clipmenu'
-cask 'switchresx'
 cask 'truecrypt'
