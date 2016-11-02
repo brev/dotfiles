@@ -21,13 +21,10 @@ unset LSCOLORS
 alias n='cd ~/src/numenta-web/numenta.com/'
 alias o='cd ~/src/numenta-web/numenta.org/'
 alias s='cd ~/src/numenta-web/shared/'
+alias w='cd ~/src/numenta-web/'
 
 # general
 alias grep='grep --color=auto'
-
-# adobe tools open quick from CLI
-alias ill='open -a /Applications/Adobe\ Illustrator\ CC\ 2014/Adobe\ Illustrator.app/Contents/MacOS/Adobe\ Illustrator'
-alias psd='open -a /Applications/Adobe\ Photoshop\ CC\ 2014/Adobe\ Photoshop\ CC\ 2014.app/Contents/MacOS/Adobe\ Photoshop\ CC\ 2014'
 
 
 ### mac os x

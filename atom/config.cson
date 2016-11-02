@@ -1,4 +1,6 @@
 "*":
+  "atom-ternjs":
+    inlineFnCompletionDocumentation: true
   core:
     audioBeep: false
     disabledPackages: [
@@ -28,23 +30,24 @@
     telemetryConsent: "limited"
     themes: [
       "one-light-ui"
-      "solarized-light-syntax"
+      "solarized-dark-syntax"
     ]
   editor:
     fontFamily: "Menlo"
-    fontSize: 16
+    fontSize: 18
     invisibles: {}
     lineHeight: 1.36
+    scrollSensitivity: 80
     showIndentGuide: true
     softWrapped: false
   "exception-reporting":
     userId: "88838393-5dc9-aff0-337c-cfa8b8b7370a"
+  "file-header":
+    numOfEmptyLinesAfterNewHeader: 1
   "highlight-line": {}
   linter: {}
   "linter-stylelint":
     enableHtmlLinting: true
-  "file-header":
-    numOfEmptyLinesAfterNewHeader: 1
   metrics:
     userId: "b41e910c48c82373ed1dc8738d1b95370494448d"
   "one-light-ui": {}
