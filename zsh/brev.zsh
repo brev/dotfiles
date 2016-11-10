@@ -18,9 +18,8 @@ unset LSCOLORS
 ### aliases
 
 # dir quick shortcuts
-alias n='cd ~/src/numenta-web/numenta.com/'
-alias o='cd ~/src/numenta-web/numenta.org/'
-alias s='cd ~/src/numenta-web/shared/'
+alias n='cd ~/src/numenta-web/packages/numenta.com/'
+alias o='cd ~/src/numenta-web/packages/numenta.org/'
 alias w='cd ~/src/numenta-web/'
 
 # general

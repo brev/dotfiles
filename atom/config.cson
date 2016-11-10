@@ -34,7 +34,7 @@
     ]
   editor:
     fontFamily: "Menlo"
-    fontSize: 18
+    fontSize: 16
     invisibles: {}
     lineHeight: 1.36
     scrollSensitivity: 80
@@ -72,3 +72,6 @@
     ensureSingleTrailingNewline: true
     ignoreWhitespaceOnCurrentLine: false
     removeTrailingWhitespace: true
+".gfm.source":
+  editor:
+    softWrap: false
