@@ -50,6 +50,16 @@
     enableHtmlLinting: true
   metrics:
     userId: "b41e910c48c82373ed1dc8738d1b95370494448d"
+  minimap:
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+      selection: true
+      selectionDecorationsZIndex: 0
   "one-light-ui": {}
   "spell-check":
     grammars: [

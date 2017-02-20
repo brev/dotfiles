@@ -7,7 +7,6 @@ if ! zgen saved; then
 
   zgen oh-my-zsh
 
-  zgen oh-my-zsh plugins/aws
   zgen oh-my-zsh plugins/brew
   zgen oh-my-zsh plugins/colored-man
   zgen oh-my-zsh plugins/command-not-found
@@ -18,12 +17,10 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/pip
   zgen oh-my-zsh plugins/python
   zgen oh-my-zsh plugins/sudo
-  zgen oh-my-zsh plugins/vi-mode
 
   zgen load ascii-soup/zsh-url-highlighter
   zgen load caiogondim/bullet-train-oh-my-zsh-theme bullet-train
   zgen load chrissicool/zsh-256color
-  zgen load clauswitt/zsh-grunt-plugin
   zgen load sharat87/pip-app
   zgen load zsh-users/zsh-completions src
   zgen load zsh-users/zsh-syntax-highlighting
