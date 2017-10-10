@@ -1,0 +1,5 @@
+# Mac OS/X
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_rsa
+  UseKeychain yes

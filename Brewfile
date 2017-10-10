@@ -1,3 +1,5 @@
+# brew bundle
+
 tap 'caskroom/cask'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
@@ -11,6 +13,7 @@ brew 'chromedriver'
 brew 'cmake'
 brew 'curl'
 brew 'dos2unix'
+brew 'f3'
 brew 'flac'
 brew 'freetype'
 brew 'gdbm'
