@@ -1,15 +1,16 @@
 # brew bundle
 
+# taps (casks at bottom)
 tap 'caskroom/cask'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'trinitronx/truecrypt'
 
+# brews
 brew 'ack'
 brew 'boost'
 brew 'capnp'
-brew 'chromedriver'
 brew 'cmake'
 brew 'curl'
 brew 'dos2unix'
@@ -41,4 +42,14 @@ brew 'wget'
 brew 'xz'
 brew 'zsh'
 
+# casks (taps at top)
+cask 'atom'
+cask 'backblaze'
+cask 'deluge'
+cask 'firefox'
+cask 'google-chrome'
+cask 'iterm2'
+cask 'java'
+cask 'spectacle'
 cask 'truecrypt'
+
