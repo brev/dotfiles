@@ -1,8 +1,7 @@
 ### paths
 
 export NVM_DIR=~/.nvm
-export PATH=/System/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/local/sbin:$PATH
-
+export PATH=/usr/local/opt/python/libexec/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 ### exports
 
