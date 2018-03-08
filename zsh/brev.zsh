@@ -1,7 +1,8 @@
 ### paths
 
 export NVM_DIR=~/.nvm
-export PATH=/usr/local/opt/python/libexec/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/opt/python/libexec/bin:/usr/local/opt/python@2/libexec/bin:/usr/local/bin:/usr/local/sbin:$PATH
+
 
 ### exports
 
@@ -15,7 +16,6 @@ unset LSCOLORS
 
 ### aliases
 
-# general
 alias grep='grep --color=auto'
 
 
