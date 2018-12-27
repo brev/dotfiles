@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for FILE in ackrc gitconfig inputrc profile zshrc
+for FILE in ackrc gitconfig inputrc profile vimrc zshrc
 do
 	ln -f -s ~/src/dotfiles/$FILE ~/.$FILE
 done

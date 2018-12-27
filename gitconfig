@@ -20,4 +20,3 @@ protocol = https
 [pager]
 	diff = true
 [core]
-	editor = atom --wait

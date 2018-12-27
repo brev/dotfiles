@@ -7,7 +7,7 @@ export PATH=/usr/local/opt/python/libexec/bin:/usr/local/opt/python@2/libexec/bi
 ### exports
 
 export CLICOLOR=1
-export EDITOR=atom
+export EDITOR=vi
 export JAVA_HOME=$(/usr/libexec/java_home)
 export KEYTIMEOUT=1
 
