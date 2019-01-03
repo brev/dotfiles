@@ -1,14 +1,18 @@
 ### paths
 
-export NVM_DIR=~/.nvm
-export PATH=/usr/local/opt/python/libexec/bin:/usr/local/opt/python@2/libexec/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/opt/python/libexec/bin:/usr/local/opt/python@2/libexec/bin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+export GEM_HOME="/usr/local/lib/ruby/gems/2.6.0"
+export GEM_PATH="/usr/local/lib/ruby/gems/2.6.0"
+export JAVA_HOME=$(/usr/libexec/java_home)
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 
 
 ### exports
 
 export CLICOLOR=1
 export EDITOR=vi
-export JAVA_HOME=$(/usr/libexec/java_home)
 export KEYTIMEOUT=1
 
 unset LSCOLORS
@@ -33,3 +37,4 @@ defaults write NSGlobalDomain KeyRepeat -int 1          # default 2
 
 export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh
+
