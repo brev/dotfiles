@@ -1,3 +1,4 @@
+autocmd FileType c,cpp,css,html,js,py,sql autocmd BufWritePre <buffer> %s/\s\+$//e
 colorscheme desert
 syntax on
 
