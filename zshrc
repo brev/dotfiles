@@ -34,3 +34,4 @@ fi
 for F in $HOME/src/dotfiles/zsh/*.zsh; do
   source $F;
 done
+

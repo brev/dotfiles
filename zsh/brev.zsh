@@ -1,11 +1,7 @@
 ### paths
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
-export GEM_HOME="/usr/local/lib/ruby/gems/2.6.0"
-export GEM_PATH="/usr/local/lib/ruby/gems/2.6.0"
+export ARCHFLAGS="-arch x86_64"
 export JAVA_HOME=$(/usr/libexec/java_home)
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export PATH=/usr/local/opt/python/libexec/bin:/usr/local/opt/python@2/libexec/bin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/bin:/usr/local/bin:/usr/local/sbin:$PATH
-export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+export PATH="/Users/brev/.pyenv:$PATH"
 
 ### exports
 export CLICOLOR=1
@@ -23,4 +19,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write NSGlobalDomain InitialKeyRepeat -int 14  # default 15
 defaults write NSGlobalDomain KeyRepeat -int 1          # default 2
+
+### pyenv
+eval "$(pyenv init -)"
 

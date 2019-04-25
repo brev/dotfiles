@@ -9,6 +9,7 @@ tap 'trinitronx/truecrypt'
 
 # brews
 brew 'ack'
+brew 'boost'
 brew 'cmake'
 brew 'curl'
 brew 'ffmpeg', args: ['with-libvpx', 'with-libvorbis']
@@ -34,6 +35,7 @@ brew 'pcre'
 brew 'pgcli'
 brew 'pkg-config'
 brew 'postgres'
+brew 'pyenv'
 brew 'python'
 brew 'readline'
 brew 'rename'
@@ -42,6 +44,7 @@ brew 'tree'
 brew 'unrar'
 brew 'wget'
 brew 'xz'
+brew 'zlib'
 brew 'zsh'
 
 # casks (taps at top)
@@ -54,11 +57,11 @@ cask 'google-chrome'
 cask 'inkscape'
 cask 'iterm2'
 cask 'java'
-cask 'macdown'
 cask 'osxfuse'
 cask 'sketch'
 cask 'spectacle'
 cask 'truecrypt'  # needs osxfuse
 #cask 'veracrypt'  # needs osxfuse
+cask 'visual-studio-code'
 cask 'vlc'
 
