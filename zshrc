@@ -1,6 +1,6 @@
 ### zgen
 
-source "${HOME}/src/zgen/zgen.zsh"
+source "${HOME}/src/tarjoilija/zgen/zgen.zsh"
 
 if ! zgen saved; then
   echo "Creating a zgen save"
@@ -31,7 +31,7 @@ fi
 
 ### custom
 
-for F in $HOME/src/dotfiles/zsh/*.zsh; do
+for F in $HOME/src/brev/dotfiles/zsh/*.zsh; do
   source $F;
 done
 
