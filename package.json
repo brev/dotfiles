@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "gatsby-cli": "^2.8.28",
+    "jscodeshift": "^0.7.0",
+    "jscodeshift-helper": "^1.1.0"
+  }
+}

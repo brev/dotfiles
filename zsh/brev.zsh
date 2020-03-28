@@ -1,7 +1,7 @@
 ### paths
 export ARCHFLAGS="-arch x86_64"
 export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH="/Users/brev/.pyenv:$PATH"
+export PATH="/Users/brev/.pyenv:/usr/local/sbin:$PATH"
 
 ### exports
 export CLICOLOR=1
@@ -24,3 +24,10 @@ defaults write NSGlobalDomain KeyRepeat -int 1          # default 2
 ### pyenv
 eval "$(pyenv init -)"
 
+### vi mode
+bindkey -v
+
+### ESC-v to open current screen into editor
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line

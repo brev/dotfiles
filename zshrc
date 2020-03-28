@@ -17,11 +17,13 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/pip
   zgen oh-my-zsh plugins/python
   zgen oh-my-zsh plugins/sudo
+  zgen oh-my-zsh plugins/yarn
 
   zgen load ascii-soup/zsh-url-highlighter
   zgen load caiogondim/bullet-train-oh-my-zsh-theme bullet-train
   zgen load chrissicool/zsh-256color
   zgen load sharat87/pip-app
+  zgen load softmoth/zsh-vim-mode
   zgen load zsh-users/zsh-completions src
   zgen load zsh-users/zsh-syntax-highlighting
 

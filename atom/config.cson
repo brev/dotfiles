@@ -1,4 +1,7 @@
 "*":
+  "atom-ide-ui":
+    use:
+      "atom-ide-diagnostics-ui": "never"
   "atom-ternjs":
     inlineFnCompletionDocumentation: true
   core:
@@ -16,7 +19,6 @@
       "language-ruby"
       "language-ruby-on-rails"
       "rename-tabs"
-      "tree-view"
     ]
     ignoredNames: [
       ".git"
@@ -30,7 +32,7 @@
     telemetryConsent: "limited"
     themes: [
       "one-light-ui"
-      "solarized-dark-syntax"
+      "solarized-light-syntax"
     ]
   editor:
     fontFamily: "Menlo"
@@ -58,11 +60,20 @@
       bookmarksDecorationsZIndex: 0
       cursorline: true
       cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
       pigments: true
       pigmentsDecorationsZIndex: 0
       selection: true
       selectionDecorationsZIndex: 0
   "one-light-ui": {}
+  "platformio-ide-terminal":
+    core:
+      scrollback: 100000
+    style:
+      fontFamily: "Meslo LG M for Powerline"
+      fontSize: "15"
+      theme: "solarized-light"
   "spell-check":
     grammars: [
       "source.asciidoc"
@@ -75,7 +86,6 @@
       "source.json"
       "source.gfm"
     ]
-  "vim-mode": {}
   "vim-mode-plus": {}
   "webbox-color": {}
   welcome:

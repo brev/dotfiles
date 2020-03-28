@@ -20,3 +20,4 @@ protocol = https
 [pager]
 	diff = true
 [core]
+whitespace = trailing-space,space-before-tab
