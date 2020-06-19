@@ -52,6 +52,8 @@
     enableHtmlLinting: true
   "linter-ui-default":
     alwaysTakeMinimumSpace: true
+    panelHeight: 188
+    showPanel: true
   metrics:
     userId: "b41e910c48c82373ed1dc8738d1b95370494448d"
   minimap:

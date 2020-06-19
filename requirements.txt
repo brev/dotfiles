@@ -1,4 +1,5 @@
 # pip install -r requirements.txt
+cli-thesaurus
 codemod
 nltk
 numpy

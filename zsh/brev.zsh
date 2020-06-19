@@ -21,13 +21,13 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write NSGlobalDomain InitialKeyRepeat -int 14  # default 15
 defaults write NSGlobalDomain KeyRepeat -int 1          # default 2
 
+### vscodium
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false
+
 ### pyenv
 eval "$(pyenv init -)"
 
 ### vi mode
 bindkey -v
-
-### ESC-v to open current screen into editor
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
