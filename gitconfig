@@ -21,3 +21,5 @@ protocol = https
 	diff = true
 [core]
 whitespace = trailing-space,space-before-tab
+[pull]
+	ff = only

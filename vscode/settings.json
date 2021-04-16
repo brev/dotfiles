@@ -1,0 +1,21 @@
+{
+    "[json]": {},
+    "css.lint.validProperties": ["composes"],
+    "C_Cpp.default.cppStandard": "c++11",
+    "C_Cpp.formatting": "Disabled",
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.fontSize": 16,
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.rulers": [80],
+    "editor.tabSize": 2,
+    "explorer.confirmDragAndDrop": false,
+    "files.trimTrailingWhitespace": false,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.lineHeight": 1.1,
+    "terminal.integrated.rendererType": "dom",
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.startupEditor": "newUntitledFile"
+}

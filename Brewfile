@@ -1,30 +1,35 @@
 # brew bundle
 
-# taps (casks at bottom)
-tap 'caskroom/cask'
+### taps (casks at bottom)
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
-tap 'operatehappy/homebrew-virtualbox'
 
-# brews
+### brews
 brew 'ack'
-brew 'aspell'
+brew 'aspell'  # lvx
+brew 'autoconf'
+brew 'autojump'
+brew 'bison'  # semanticdb
 brew 'boost'
 brew 'cmake'
 brew 'curl'
 brew 'ffmpeg', args: ['with-libvpx', 'with-libvorbis']
 brew 'flac'
+brew 'flex'  # semanticdb
 brew 'freetype'
+brew 'fzf'
 brew 'gdb'
 brew 'gdbm'
 brew 'gist'
 brew 'git'
 brew 'gpg'
+brew 'hledger'  # lvx
 brew 'hub'
-brew 'hledger'
+brew 'id3lib'
 brew 'imagemagick'
 brew 'jpeg'
+brew 'jq'
 brew 'libogg'
 brew 'libpng'
 brew 'libtiff'
@@ -32,43 +37,36 @@ brew 'libtool'
 brew 'libvorbis'
 brew 'libyaml'
 brew 'llvm'
-brew 'node@12'
+brew 'node'
 brew 'openssl'
 brew 'p7zip'
 brew 'pcre'
 brew 'pgcli'
 brew 'pkg-config'
-brew 'postgres'
-brew 'pyenv'
+brew 'postgres'  # lvx
 brew 'python'
 brew 'readline'
 brew 'rename'
 brew 'restic'
-brew 'ruby'
 brew 'tree'
-brew 'unrar'
+brew 'up'
 brew 'wget'
 brew 'xz'
 brew 'yamllint'
 brew 'zlib'
 brew 'zsh'
 
-# casks (taps at top)
-cask 'atom'
+### casks (taps at top)
 cask 'authy'
-cask 'dbeaver-community'
+cask 'backblaze'
+cask 'dbeaver-community'  # lvx
 cask 'deluge'
-cask 'docker'
 cask 'firefox'
-cask 'google-chrome'
-cask 'inkscape'
+cask 'gimp'
 cask 'iterm2'
-cask 'java'
-cask 'krita'
-cask 'microsoft-edge'
+cask 'lastpass'
 cask 'sketch'
 cask 'spectacle'
-cask 'virtualbox'
+cask 'visual-studio-code'
 cask 'vlc'
-cask 'vscodium'
 

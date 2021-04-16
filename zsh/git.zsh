@@ -2,7 +2,7 @@
 
 #git config --global pager.<command> false
 git config --global pager.diff true
-
+git config --global pull.ff only
 
 # git aliases
 

@@ -1,6 +1,7 @@
 # pip install -r requirements.txt
 cli-thesaurus
 codemod
+ffmpeg-normalize
 nltk
 numpy
 nupic

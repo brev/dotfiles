@@ -1,0 +1,18 @@
+# code --list-extensions
+# cat extensions.txt | xargs -n 1 code --install-extension
+bajdzis.vscode-database
+DavidAnson.vscode-markdownlint
+ecmel.vscode-html-css
+folke.vscode-monorepo-workspace
+formulahendry.auto-rename-tag
+kumar-harsh.graphql-for-vscode
+ms-azuretools.vscode-docker
+ms-python.python
+ms-toolsai.jupyter
+ms-vscode.cpptools
+redhat.vscode-yaml
+shardulm94.trailing-spaces
+svelte.svelte-vscode
+twxs.cmake
+Tyriar.lorem-ipsum
+vscodevim.vim
