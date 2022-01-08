@@ -1,4 +1,7 @@
+#
 # brew bundle
+# brew bundle cleanup  # list. --force to remove.
+#
 
 ### taps (casks at bottom)
 tap 'homebrew/bundle'
@@ -10,6 +13,7 @@ brew 'ack'
 brew 'aspell'  # lvx
 brew 'autoconf'
 brew 'autojump'
+brew 'base64'
 brew 'bison'  # semanticdb
 brew 'boost'
 brew 'cmake'
@@ -37,7 +41,8 @@ brew 'libtool'
 brew 'libvorbis'
 brew 'libyaml'
 brew 'llvm'
-brew 'node'
+brew 'neovim'
+brew 'node@16' # lvx
 brew 'openssl'
 brew 'p7zip'
 brew 'pcre'
@@ -59,14 +64,19 @@ brew 'zsh'
 ### casks (taps at top)
 cask 'authy'
 cask 'backblaze'
+cask 'balenaetcher'
 cask 'dbeaver-community'  # lvx
 cask 'deluge'
+cask 'figma'
 cask 'firefox'
 cask 'gimp'
+cask 'google-chrome'
 cask 'iterm2'
 cask 'lastpass'
+cask 'rar'
 cask 'sketch'
 cask 'spectacle'
-cask 'visual-studio-code'
+cask 'vscodium'
 cask 'vlc'
+cask 'zoom'
 

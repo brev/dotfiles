@@ -1,5 +1,4 @@
 "autocmd BufWritePre * %s/\s\+$//e
-colorscheme desert
 syntax on
 
 set expandtab

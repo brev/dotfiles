@@ -15,11 +15,10 @@ if ! zgen saved; then
   zgen oh-my-zsh
 
   zgen oh-my-zsh plugins/brew
-  zgen oh-my-zsh plugins/colored-man
   zgen oh-my-zsh plugins/command-not-found
   zgen oh-my-zsh plugins/git
   zgen oh-my-zsh plugins/github
-  zgen oh-my-zsh plugins/osx
+  zgen oh-my-zsh plugins/macos
   zgen oh-my-zsh plugins/node
   zgen oh-my-zsh plugins/pip
   zgen oh-my-zsh plugins/python
@@ -48,3 +47,8 @@ done
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Each window has own history
+unsetopt inc_append_history
+unsetopt share_history
+

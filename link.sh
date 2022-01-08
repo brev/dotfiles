@@ -5,7 +5,7 @@ do
 	ln -f -s ~/src/dotfiles/$FILE ~/.$FILE
 done
 
-for DIR in iterm2 ssh vscode
+for DIR in config iterm2 ssh vscode
 do
   cd $DIR
   ./link.sh
