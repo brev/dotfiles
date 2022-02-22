@@ -6,7 +6,7 @@ fi
 
 for FILE in config
 do
-	ln -fs $PWD/$FILE $HOME/.ssh/$FILE || echo 'Symlink failed'
+	ln -fns $PWD/$FILE $HOME/.ssh/$FILE || echo 'Symlink failed'
 done
 
 exit 0

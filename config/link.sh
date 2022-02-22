@@ -6,5 +6,5 @@ fi
 
 for DIR in nvim
 do
-  ln -fs $PWD/$DIR $HOME/.config/$DIR
+  ln -fns $PWD/$DIR $HOME/.config/$DIR
 done

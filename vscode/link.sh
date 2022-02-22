@@ -8,7 +8,7 @@ fi
 
 for FILE in settings.json
 do
-	ln -fs $PWD/$FILE $CFG/$FILE || echo 'Symlink failed'
+	ln -fns $PWD/$FILE $CFG/$FILE || echo 'Symlink failed'
 done
 
 exit 0

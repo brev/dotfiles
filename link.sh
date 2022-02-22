@@ -1,8 +1,10 @@
 #!/bin/sh
 
+ln -fns $PWD ~/.dotfiles
+
 for FILE in ackrc gitconfig inputrc profile vimrc zshrc
 do
-	ln -f -s $PWD/$FILE ~/.$FILE
+	ln -fns $PWD/$FILE ~/.$FILE
 done
 
 for DIR in config iterm2 ssh vscode
@@ -11,3 +13,4 @@ do
   ./link.sh
   cd ..
 done
+
