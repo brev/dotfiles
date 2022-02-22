@@ -1,5 +1,6 @@
 # git config
 
+git config --global init.defaultBranch main
 #git config --global pager.<command> false
 git config --global pager.diff true
 git config --global pull.ff only
@@ -22,3 +23,4 @@ alias grm='git rm'
 alias grv='git remote -v'
 alias gs='git status'
 alias gso='git status | grep -v out/'
+

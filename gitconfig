@@ -23,3 +23,5 @@ protocol = https
 whitespace = trailing-space,space-before-tab
 [pull]
 	ff = only
+[init]
+	defaultBranch = main

@@ -2,7 +2,7 @@
 
 for FILE in ackrc gitconfig inputrc profile vimrc zshrc
 do
-	ln -f -s ~/src/dotfiles/$FILE ~/.$FILE
+	ln -f -s ~/src/@brev/dotfiles/$FILE ~/.$FILE
 done
 
 for DIR in config iterm2 ssh vscode

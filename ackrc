@@ -1,0 +1,5 @@
+--ignore-directory=is:.svelte-kit
+--ignore-directory=is:build
+--ignore-directory=is:coverage
+--ignore-directory=is:dist
+--ignore-directory=is:node_modules
