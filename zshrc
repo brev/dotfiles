@@ -41,7 +41,7 @@ fi
 
 ### custom
 
-for F in $HOME/src/@brev/dotfiles/zsh/*.zsh; do
+for F in $PWD/zsh/*.zsh; do
   source $F;
 done
 
