@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ln -fns $PWD ~/.dotfiles
+ln -ns $PWD ~/.dotfiles
 
 for FILE in ackrc gitconfig inputrc profile vimrc zshrc
 do
