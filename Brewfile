@@ -78,8 +78,6 @@ cask 'lastpass'
 cask 'rar'
 cask 'rectangle'
 cask 'sketch'
-cask 'vimr'
-cask 'vscodium'
 cask 'vlc'
 cask 'zoom'
 
