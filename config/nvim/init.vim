@@ -1,47 +1,56 @@
+""" setup
+
+" brew install gnu-sed ripgrep
+
+" vimrc
+source ~/.vimrc
+
+
+
 """ plugins
 
 "" install
 
 call plug#begin('~/.vim/plugged')
 
-" dependencies
-Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
-Plug 'nvim-lua/plenary.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
+  " dependencies
+  Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'kyazdani42/nvim-web-devicons'
 
-" lsp
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'lithammer/nvim-diagnosticls'
+  " lsp
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/cmp-nvim-lsp'
 
-" vsnip
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
+  " vsnip
+  Plug 'hrsh7th/vim-vsnip'
+  Plug 'hrsh7th/vim-vsnip-integ'
 
-" cmp
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/nvim-cmp'
+  " cmp
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-cmdline'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-vsnip'
+  Plug 'hrsh7th/nvim-cmp'
 
-" others
-Plug 'famiu/bufdelete.nvim'
-Plug 'akinsho/bufferline.nvim'
-Plug 'numToStr/Comment.nvim'
-Plug 'phaazon/hop.nvim'
-Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'ray-x/navigator.lua'
-Plug 'overcache/NeoSolarized'
-Plug 'windwp/nvim-spectre'
-Plug 'lewis6991/spellsitter.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 's1n7ax/nvim-terminal'
-Plug 'folke/trouble.nvim'
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  " others
+  Plug 'famiu/bufdelete.nvim'
+  Plug 'akinsho/bufferline.nvim'
+  Plug 'numToStr/Comment.nvim'
+  Plug 'phaazon/hop.nvim'
+  Plug 'lukas-reineke/indent-blankline.nvim'
+  Plug 'nvim-lualine/lualine.nvim'
+  Plug 'ray-x/navigator.lua'
+  Plug 'overcache/NeoSolarized'
+  Plug 'windwp/nvim-spectre'
+  Plug 'lewis6991/spellsitter.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  Plug 's1n7ax/nvim-terminal'
+  Plug 'folke/trouble.nvim'
+  Plug 'kyazdani42/nvim-tree.lua'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'tanvirtin/vgit.nvim'
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 call plug#end()
 
@@ -52,9 +61,9 @@ call plug#end()
 lua << END
   require('bufferline').setup({
     options = {
-      close_command = "Bdelete %d",
+      close_command = 'Bdelete %d',
       diagnostics = 'nvim_lsp',
-      right_mouse_command = "Bdelete %d",
+      right_mouse_command = 'Bdelete %d',
       offsets = {
         {
           filetype = 'NvimTree',
@@ -80,7 +89,7 @@ lua << END
       end
     },
     mapping = {
-      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+      ['<tab>'] = cmp.mapping.confirm({ select = true }),
     },
     sources = {
       { name = 'nvim_lsp' },
@@ -110,6 +119,9 @@ autocmd ColorScheme *
 " lualine
 lua require('lualine').setup({})
 
+" solarized
+colorscheme NeoSolarized
+
 " spellsitter 
 lua require('spellsitter').setup({})
 
@@ -117,7 +129,7 @@ lua require('spellsitter').setup({})
 lua require('nvim-terminal').setup({})
 
 " tree
-lua require('nvim-tree').setup({})
+lua require('nvim-tree').setup({ auto_close = true })
 
 " treesitter
 lua << END
@@ -144,76 +156,61 @@ lua << END
 END
 
 " trouble
-lua require("trouble").setup({})
+lua require('trouble').setup({})
+
+" vgit
+lua require('vgit').setup({})
 
 " lsp + navigator (last)
-lua << END
-  require('navigator').setup({})
-END
+lua require('navigator').setup({})
+autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()
 
 
 
 """ keybindings
 
-nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>sv <cmd>source $MYVIMRC<cr>
 
 " bufferline
-nnoremap <silent>b] :BufferLineCycleNext<CR>
-nnoremap <silent>b[ :BufferLineCyclePrev<CR>
-nnoremap <silent>bm] :BufferLineMoveNext<CR>
-nnoremap <silent>bm[ :BufferLineMovePrev<CR>
-nnoremap <silent><leader>bd :Bdelete<CR>
-nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
-nnoremap <silent><leader>2 <Cmd>BufferLineGoToBuffer 2<CR>
-nnoremap <silent><leader>3 <Cmd>BufferLineGoToBuffer 3<CR>
-nnoremap <silent><leader>4 <Cmd>BufferLineGoToBuffer 4<CR>
-nnoremap <silent><leader>5 <Cmd>BufferLineGoToBuffer 5<CR>
-nnoremap <silent><leader>6 <Cmd>BufferLineGoToBuffer 6<CR>
-nnoremap <silent><leader>7 <Cmd>BufferLineGoToBuffer 7<CR>
-nnoremap <silent><leader>8 <Cmd>BufferLineGoToBuffer 8<CR>
-nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
+nnoremap <silent>b] <cmd>BufferLineCycleNext<cr>
+nnoremap <silent>b[ <cmd>BufferLineCyclePrev<cr>
+nnoremap <silent>bm] <cmd>BufferLineMoveNext<cr>
+nnoremap <silent>bm[ <cmd>BufferLineMovePrev<cr>
+nnoremap <silent><leader>bd <cmd>Bdelete<cr>
+nnoremap <silent><leader>1 <cmd>BufferLineGoToBuffer 1<cr>
+nnoremap <silent><leader>2 <cmd>BufferLineGoToBuffer 2<cr>
+nnoremap <silent><leader>3 <cmd>BufferLineGoToBuffer 3<cr>
+nnoremap <silent><leader>4 <cmd>BufferLineGoToBuffer 4<cr>
+nnoremap <silent><leader>5 <cmd>BufferLineGoToBuffer 5<cr>
+nnoremap <silent><leader>6 <cmd>BufferLineGoToBuffer 6<cr>
+nnoremap <silent><leader>7 <cmd>BufferLineGoToBuffer 7<cr>
+nnoremap <silent><leader>8 <cmd>BufferLineGoToBuffer 8<cr>
+nnoremap <silent><leader>9 <cmd>BufferLineGoToBuffer 9<cr>
 
 " hop
-nnoremap <silent><leader>hc <Cmd>HopChar1<CR>
-nnoremap <silent><leader>hd <Cmd>HopChar2<CR>
-nnoremap <silent><leader>hl <Cmd>HopLine<CR>
-nnoremap <silent><leader>hp <Cmd>HopPattern<CR>
-nnoremap <silent><leader>hs <Cmd>HopLineStart<CR>
-nnoremap <silent><leader>hw <Cmd>HopWord<CR>
+nnoremap <silent><leader>hc <cmd>HopChar1<cr>
+nnoremap <silent><leader>hd <cmd>HopChar2<cr>
+nnoremap <silent><leader>hl <cmd>HopLine<cr>
+nnoremap <silent><leader>hp <cmd>HopPattern<cr>
+nnoremap <silent><leader>hs <cmd>HopLineStart<cr>
+nnoremap <silent><leader>hw <cmd>HopWord<cr>
 
 " spectre
-nnoremap <leader>fr <cmd>lua require('spectre').open()<CR>
+nnoremap <leader>fr <cmd>lua require('spectre').open()<cr>
 
 " telescope
-nnoremap <leader>fb <cmd>Telescope buffers<CR>
-nnoremap <leader>ff <cmd>Telescope find_files<CR>
-nnoremap <leader>fg <cmd>Telescope live_grep<CR>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 
 " tree
-nnoremap <leader>t :NvimTreeToggle<CR>
+nnoremap <leader>t <cmd>NvimTreeToggle<cr>
 
 " trouble
-nnoremap <leader>xx <cmd>TroubleToggle<CR>
-nnoremap <leader>xd <cmd>TroubleToggle document_diagnostics<CR>
-nnoremap <leader>xl <cmd>TroubleToggle loclist<CR>
-nnoremap <leader>xq <cmd>TroubleToggle quickfix<CR>
-nnoremap <leader>xr <cmd>TroubleToggle lsp_references<CR>
-nnoremap <leader>xw <cmd>TroubleToggle workspace_diagnostics<CR>
-
-
-
-""" setup
-
-" brew install gnu-sed ripgrep
-
-" vimrc
-source ~/.vimrc
-
-" colors
-set termguicolors
-colorscheme NeoSolarized
-
-" startup
-"autocmd VimEnter * TroubleToggle
-"autocmd VimEnter * NvimTreeOpen
+nnoremap <leader>xx <cmd>TroubleToggle<cr>
+nnoremap <leader>xd <cmd>TroubleToggle document_diagnostics<cr>
+nnoremap <leader>xl <cmd>TroubleToggle loclist<cr>
+nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>
+nnoremap <leader>xr <cmd>TroubleToggle lsp_references<cr>
+nnoremap <leader>xw <cmd>TroubleToggle workspace_diagnostics<cr>
 
