@@ -2,7 +2,6 @@
 
 " brew install gnu-sed ripgrep
 
-" vimrc
 source ~/.vimrc
 
 
@@ -43,6 +42,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ray-x/navigator.lua'
   Plug 'overcache/NeoSolarized'
   Plug 'windwp/nvim-spectre'
+  Plug 'stephenway/postcss.vim'
   Plug 'lewis6991/spellsitter.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 's1n7ax/nvim-terminal'
@@ -105,11 +105,25 @@ END
 " comment
 lua require('Comment').setup({})
 
+" devicons
+lua << END
+  require('nvim-web-devicons').setup({
+    override = {
+      postcss = {
+        icon = '',
+        color = '#563d7c',
+        cterm_color = '60',
+        name = 'PostCss',
+      }
+    }
+  })
+END
+
 " hop
 lua require('hop').setup({})
 
 " indent-blankline
-autocmd ColorScheme * 
+autocmd ColorScheme *
   \ if &background == 'light'
   \ |   highlight IndentBlanklineChar guifg=#CCCCCC gui=nocombine
   \ | else
@@ -119,17 +133,33 @@ autocmd ColorScheme *
 " lualine
 lua require('lualine').setup({})
 
+" postcss
+autocmd BufRead,BufNewFile *.postcss set filetype=postcss
+
 " solarized
 colorscheme NeoSolarized
 
-" spellsitter 
+" spellsitter
 lua require('spellsitter').setup({})
 
 " terminal
 lua require('nvim-terminal').setup({})
 
 " tree
-lua require('nvim-tree').setup({ auto_close = true })
+let g:nvim_tree_icons = {
+  \   'default': '',
+  \   'folder': {
+  \     'arrow_open': '▽',
+  \     'arrow_closed': '▷',
+  \   },
+  \ }
+lua << END
+  local tree = require('nvim-tree')
+  tree.setup({
+    auto_close = true,
+    open_on_setup = true,
+  })
+END
 
 " treesitter
 lua << END
@@ -156,7 +186,12 @@ lua << END
 END
 
 " trouble
-lua require('trouble').setup({})
+lua << END
+  require('trouble').setup({
+    auto_open = true,
+    auto_close = true,
+  })
+END
 
 " vgit
 lua require('vgit').setup({})
@@ -213,4 +248,12 @@ nnoremap <leader>xl <cmd>TroubleToggle loclist<cr>
 nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>
 nnoremap <leader>xr <cmd>TroubleToggle lsp_references<cr>
 nnoremap <leader>xw <cmd>TroubleToggle workspace_diagnostics<cr>
+
+" vgit
+nnoremap <leader>gda <cmd>VGit project_diff_preview<cr>
+nnoremap <leader>gdb <cmd>VGit buffer_diff_preview<cr>
+nnoremap <leader>gsa <cmd>VGit stage_all<cr>
+nnoremap <leader>gsb <cmd>VGit buffer_stage<cr>
+nnoremap <leader>gub <cmd>VGit buffer_unstage<cr>
+
 
