@@ -33,6 +33,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'hrsh7th/nvim-cmp'
 
   " others
+  Plug 'dense-analysis/ale'
   Plug 'famiu/bufdelete.nvim'
   Plug 'akinsho/bufferline.nvim'
   Plug 'numToStr/Comment.nvim'
@@ -56,6 +57,18 @@ call plug#end()
 
 
 "" configuration
+
+" ale
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+  \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \   'javascript': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
+  \   'json': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
+  \   'typescript': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
+  \   'svelte': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
+  \ }
+let g:ale_linter_aliases = { 'svelte': ['svelte', 'javascript'] }
+let g:ale_linters = { 'svelte': ['eslint', 'svelteserver'] }
 
 " bufferline
 lua << END
@@ -198,7 +211,6 @@ lua require('vgit').setup({})
 
 " lsp + navigator (last)
 lua require('navigator').setup({})
-autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()
 
 
 
@@ -255,5 +267,3 @@ nnoremap <leader>gdb <cmd>VGit buffer_diff_preview<cr>
 nnoremap <leader>gsa <cmd>VGit stage_all<cr>
 nnoremap <leader>gsb <cmd>VGit buffer_stage<cr>
 nnoremap <leader>gub <cmd>VGit buffer_unstage<cr>
-
-
