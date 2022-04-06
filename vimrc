@@ -9,6 +9,7 @@ set ruler
 set smarttab
 set termguicolors
 
+set clipboard=unnamedplus
 set colorcolumn=80
 set laststatus=2
 set mouse=a

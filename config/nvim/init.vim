@@ -1,7 +1,5 @@
 """ setup
 
-" brew install gnu-sed ripgrep
-
 source ~/.vimrc
 
 
