@@ -66,6 +66,7 @@ brew 'zlib'
 brew 'zsh'
 
 ### casks (taps at top)
+cask 'audacity'
 cask 'authy'
 cask 'backblaze'
 cask 'balenaetcher'
