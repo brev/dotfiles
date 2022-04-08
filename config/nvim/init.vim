@@ -60,6 +60,7 @@ call plug#end()
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \   'html': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
   \   'javascript': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
   \   'json': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
   \   'typescript': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
@@ -208,7 +209,13 @@ END
 lua require('vgit').setup({})
 
 " lsp + navigator (last)
-lua require('navigator').setup({})
+lua << END
+  require('navigator').setup({
+    lsp = {
+      disable_lsp = { 'angularls', 'denols' },
+    }
+  })
+END
 
 
 
