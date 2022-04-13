@@ -38,16 +38,17 @@ call plug#begin('~/.vim/plugged')
   Plug 'phaazon/hop.nvim'
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'nvim-lualine/lualine.nvim'
+  Plug 'yavko/minimap.nvim'
   Plug 'ray-x/navigator.lua'
   Plug 'overcache/NeoSolarized'
-  Plug 'windwp/nvim-spectre'
   Plug 'stephenway/postcss.vim'
+  Plug 'windwp/nvim-spectre'
   Plug 'lewis6991/spellsitter.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 's1n7ax/nvim-terminal'
-  Plug 'folke/trouble.nvim'
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'folke/trouble.nvim'
   Plug 'tanvirtin/vgit.nvim'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
@@ -144,6 +145,9 @@ autocmd ColorScheme *
 
 " lualine
 lua require('lualine').setup({})
+
+" minimap
+let g:minimap_auto_start = 1
 
 " postcss
 autocmd BufRead,BufNewFile *.postcss set filetype=postcss

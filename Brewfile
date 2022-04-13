@@ -1,6 +1,6 @@
 #
 # brew bundle
-# brew bundle cleanup  # list. --force to remove.
+# brew bundle cleanup  # --force
 #
 
 ### taps (casks at bottom)
@@ -17,6 +17,7 @@ brew 'base64'
 brew 'bison'
 brew 'boost'
 brew 'cmake'
+brew 'code-minimap'
 brew 'curl'
 brew 'ffmpeg', args: ['with-libvpx', 'with-libvorbis']
 brew 'flac'
@@ -27,7 +28,7 @@ brew 'gdb'
 brew 'gdbm'
 brew 'gist'
 brew 'git'
-brew 'gnu-sed' # neovim
+brew 'gnu-sed'
 brew 'gpg'
 brew 'heroku'
 brew 'heroku-node'
@@ -56,7 +57,7 @@ brew 'python'
 brew 'readline'
 brew 'rename'
 brew 'restic'
-brew 'ripgrep' # neovim
+brew 'ripgrep'
 brew 'tree'
 brew 'up'
 brew 'wget'
