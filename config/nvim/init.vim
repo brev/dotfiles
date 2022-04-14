@@ -135,25 +135,28 @@ END
 " hop
 lua require('hop').setup({})
 
-" indent-blankline
-autocmd ColorScheme *
-  \ if &background == 'light'
-  \ |   highlight IndentBlanklineChar guifg=#CCCCCC gui=nocombine
-  \ | else
-  \ |   highlight IndentBlanklineChar guifg=#333333 gui=nocombine
-  \ | endif
-
 " lualine
 lua require('lualine').setup({})
 
 " minimap
-let g:minimap_auto_start = 1
+let g:minimap_highlight_range = 1
+let g:minimap_range_color = 'MinimapCustomRange'
+autocmd BufRead,BufNewFile * Minimap
+autocmd BufUnload * MinimapClose
 
 " postcss
 autocmd BufRead,BufNewFile *.postcss set filetype=postcss
 
 " solarized
 colorscheme NeoSolarized
+autocmd ColorScheme *
+  \ if &background == 'light'
+  \ |   highlight IndentBlanklineChar guifg=#CCCCCC
+  \ |   highlight MinimapCustomRange guibg=#CCCCCC
+  \ | else
+  \ |   highlight IndentBlanklineChar guifg=#333333
+  \ |   highlight MinimapCustomRange guibg=#333333
+  \ | endif
 
 " spellsitter
 lua require('spellsitter').setup({})
@@ -162,6 +165,7 @@ lua require('spellsitter').setup({})
 lua require('nvim-terminal').setup({})
 
 " tree
+autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 let g:nvim_tree_icons = {
   \   'default': '',
   \   'folder': {
@@ -170,9 +174,7 @@ let g:nvim_tree_icons = {
   \   },
   \ }
 lua << END
-  local tree = require('nvim-tree')
-  tree.setup({
-    auto_close = true,
+  require('nvim-tree').setup({
     open_on_setup = true,
   })
 END
