@@ -49,7 +49,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'folke/trouble.nvim'
-  Plug 'tanvirtin/vgit.nvim'
+  "Plug 'tanvirtin/vgit.nvim'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 call plug#end()
@@ -212,13 +212,13 @@ lua << END
 END
 
 " vgit
-lua require('vgit').setup({})
+"lua require('vgit').setup({})
 
 " lsp + navigator (last)
 lua << END
   require('navigator').setup({
     lsp = {
-      disable_lsp = { 'angularls', 'denols' },
+      disable_lsp = { 'angularls', 'denols', 'sqls' },
     }
   })
 END

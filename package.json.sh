@@ -4,6 +4,7 @@ npm install --global \
   bash-language-server \
   corepack \
   pnpm \
+  prettier \
   sql-language-server \
   stylelint-lsp \
   svelte-language-server \
