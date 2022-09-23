@@ -1,4 +1,5 @@
 # paths
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/bison/bin:$PATH"
 export PATH="/usr/local/opt/flex/bin:$PATH"
@@ -24,15 +25,10 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write NSGlobalDomain InitialKeyRepeat -int 14  # default 15
 defaults write NSGlobalDomain KeyRepeat -int 1          # default 2
 
-# vscodium
-defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false
-
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # aliases
 alias grep='grep --color=auto'
-alias code=codium
-alias vi=nvim
-alias vim=nvim
-
+alias vi=lvim
+alias vim=lvim

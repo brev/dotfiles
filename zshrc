@@ -51,4 +51,3 @@ done
 # Each window has own history
 unsetopt inc_append_history
 unsetopt share_history
-

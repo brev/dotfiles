@@ -1,7 +1,5 @@
-#
 # brew bundle
-# brew bundle cleanup  # --force
-#
+#   brew bundle cleanup --force
 
 ### taps (casks at bottom)
 tap 'homebrew/bundle'
@@ -17,7 +15,6 @@ brew 'base64'
 brew 'bison'
 brew 'boost'
 brew 'cmake'
-brew 'code-minimap'
 brew 'curl'
 brew 'ffmpeg', args: ['with-libvpx', 'with-libvorbis']
 brew 'flac'
@@ -30,8 +27,6 @@ brew 'gist'
 brew 'git'
 brew 'gnu-sed'
 brew 'gpg'
-brew 'heroku'
-brew 'heroku-node'
 brew 'hub'
 brew 'id3lib'
 brew 'imagemagick'

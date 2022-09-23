@@ -2,7 +2,7 @@
 
 ln -ns $PWD ~/.dotfiles
 
-for FILE in ackrc gitconfig inputrc profile vimrc zshrc
+for FILE in ackrc gitconfig inputrc profile vimrc zshenv zshrc
 do
 	ln -fns $PWD/$FILE ~/.$FILE
 done
@@ -13,4 +13,3 @@ do
   ./link.sh
   cd ..
 done
-

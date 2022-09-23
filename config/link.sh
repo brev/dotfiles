@@ -4,7 +4,14 @@ if [ ! -d "$HOME/.config" ]; then
   mkdir -p $HOME/.config
 fi
 
-for DIR in nvim
+for DIR in lvim nvim
 do
-  ln -fns $PWD/$DIR $HOME/.config/$DIR
+  cd $DIR
+  ./link.sh
+  cd ..
 done
+
+#for DIR in nvim
+#do
+#  ln -fns $PWD/$DIR $HOME/.config/$DIR
+#done
