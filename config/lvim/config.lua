@@ -172,6 +172,15 @@ lvim.plugins = {
     end,
   },
 
+  -- treesitter
+  {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    config = function()
+      require("nvim-treesitter.install").prefer_git = true
+    end,
+  },
+
   -- trouble
   {
     "folke/trouble.nvim",
