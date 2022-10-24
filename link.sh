@@ -7,7 +7,7 @@ do
 	ln -fns $PWD/$FILE ~/.$FILE
 done
 
-for DIR in config iterm2 ssh vscode
+for DIR in config iterm2 ssh
 do
   cd $DIR
   ./link.sh

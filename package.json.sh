@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 npm install --global \
+  @northflank/cli \
+  @railway/cli \
   bash-language-server \
   corepack \
   pnpm \
