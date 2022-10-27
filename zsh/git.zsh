@@ -1,26 +1,18 @@
-# git config
+### git
 
+# color
+git config --global color.branch auto
+git config --global color.diff auto
+git config --global color.status auto
+
+# core
+git config --global core.whitespace trailing-space,space-before-tab
+
+# init
 git config --global init.defaultBranch main
-#git config --global pager.<command> false
+
+# pager
 git config --global pager.diff true
+
+# pull
 git config --global pull.ff only
-
-# git aliases
-
-alias ga='git add'
-alias gb='git branch'
-alias gcheck='git checkout'
-alias gclone='git clone'
-alias gcom='git commit'
-alias gd='git diff'
-alias gf='git fetch'
-alias gl='git log'
-alias gmerge='git merge'
-alias gmv='git mv'
-alias gpull='git pull'
-alias gpush='git push'
-alias grm='git rm'
-alias grv='git remote -v'
-alias gs='git status'
-alias gso='git status | grep -v out/'
-

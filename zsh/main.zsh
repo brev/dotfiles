@@ -1,3 +1,5 @@
+### main
+
 # paths
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
@@ -12,7 +14,7 @@ export LDFLAGS="-L/usr/local/opt/flex/lib $LDFLAGS"
 
 # settings
 export CLICOLOR=1
-export EDITOR=vi
+export EDITOR=lvim
 export KEYTIMEOUT=1
 unset LSCOLORS
 
@@ -20,15 +22,9 @@ unset LSCOLORS
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
-defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write NSGlobalDomain InitialKeyRepeat -int 14  # default 15
 defaults write NSGlobalDomain KeyRepeat -int 1          # default 2
 
-# autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
 # aliases
 alias grep='grep --color=auto'
-alias vi=lvim
-alias vim=lvim

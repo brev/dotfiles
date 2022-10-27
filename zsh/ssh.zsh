@@ -1,4 +1,4 @@
-# ssh ident
+### ssh
 
 if [ $(ssh-add -l | grep -c "The agent has no identities." ) -eq 1 ]; then
   if [ -f /mach_kernel ]; then
