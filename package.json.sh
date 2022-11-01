@@ -5,9 +5,11 @@ npm install --global \
   @railway/cli \
   bash-language-server \
   corepack \
+  eslint_d \
+  neovim \
   pnpm \
   prettier \
-  sql-language-server \
+  @fsouza/prettierd \
   stylelint-lsp \
   svelte-language-server \
   svgo \

@@ -1,14 +1,9 @@
-### powerlevel10k
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+# powerlevel10k
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-### zgen
-
+# zgen init
 source "${HOME}/.zgen/zgen.zsh"
 
 if ! zgen saved; then
@@ -42,22 +37,17 @@ if ! zgen saved; then
   zgen load chrissicool/zsh-256color
   zgen load MichaelAquilina/zsh-auto-notify
   zgen load romkatv/powerlevel10k powerlevel10k
-  zgen load zsh-users/zsh-autosuggestions
   zgen load zsh-users/zsh-syntax-highlighting
   zgen load softmoth/zsh-vim-mode . main # last
 
   zgen save
 fi
 
-### custom
-
+# custom settings
 for F in $HOME/.dotfiles/zsh/*.zsh; do
   source $F;
 done
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Each window has own history
+# windows separate history
 unsetopt inc_append_history
 unsetopt share_history
