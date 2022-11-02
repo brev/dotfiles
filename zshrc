@@ -32,7 +32,6 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/urltools
   zgen oh-my-zsh plugins/vi-mode
   zgen oh-my-zsh plugins/web-search
-  zgen oh-my-zsh plugins/zsh-interactive-cd
 
   zgen load chrissicool/zsh-256color
   zgen load MichaelAquilina/zsh-auto-notify

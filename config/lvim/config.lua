@@ -1,17 +1,47 @@
--- general
+-- General
 lvim.colorscheme = "catppuccin"
 lvim.format_on_save = true
 lvim.log.level = "warn"
 
--- core plugins (exit, reopen, :PackerInstall, :PackerCompile)
+-- Core Plugins (restart, :PackerInstall, :PackerCompile, restart)
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
+lvim.builtin.gitsigns.opts.signs.delete.text = lvim.icons.ui.BoldLineLeft
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
--- treesitter
+-- Keymappings (restart, :PackerInstall, :PackerCompile, restart)
+lvim.leader = "space"
+lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.builtin.which_key.mappings.b.b = nil
+lvim.builtin.which_key.mappings.b.h = {
+  "<cmd>BufferLineCyclePrev<cr>", "Previous"
+}
+lvim.builtin.which_key.mappings.b.l = {
+  "<cmd>BufferLineCycleNext<cr>", "Next"
+}
+lvim.builtin.which_key.mappings.b.m = {
+  name = "Move",
+  h = {
+    "<cmd>BufferLineMovePrev<cr>", "Previous"
+  },
+  l = {
+    "<cmd>BufferLineMoveNext<cr>", "Next"
+  },
+}
+lvim.builtin.which_key.mappings.b.n = nil
+lvim.builtin.which_key.mappings.g.S = {
+  "<cmd>Gitsigns stage_buffer<cr>", "Stage Buffer"
+}
+lvim.builtin.which_key.mappings.s.F = {
+  "<cmd>Telescope oldfiles<cr>", "Open Recent File"
+}
+lvim.builtin.which_key.mappings.s.r = {
+  "<cmd>lua require('spectre').open()<cr>", "Search and Replace"
+}
+
+-- Treesitter
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "css",
@@ -31,7 +61,7 @@ lvim.builtin.treesitter.ensure_installed = {
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
--- formatters
+-- Formatters
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "beautysh" },
@@ -54,7 +84,7 @@ formatters.setup {
   { command = "xmllint" },
 }
 
--- linters
+-- Linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   {
@@ -74,14 +104,7 @@ linters.setup {
   { command = "zsh" },
 }
 
--- keymappings
-lvim.leader = "space"
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.builtin.which_key.mappings["ss"] = {
-  "<cmd>lua require \"spectre\".open()<cr>", "Search and Substitute"
-}
-
--- extra plugins
+-- Extra Plugins
 lvim.plugins = {
   -- catppuccin
   { "catppuccin/nvim", as = "catppuccin" },
@@ -115,9 +138,8 @@ lvim.plugins = {
   -- spectre
   {
     "windwp/nvim-spectre",
-    event = "BufRead",
     config = function()
-      require("spectre").setup()
+      require("spectre").setup({})
     end,
   },
 
@@ -125,23 +147,17 @@ lvim.plugins = {
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
-    config = function()
-      require("trouble").setup({
-        auto_open = true,
-        auto_close = true,
-      })
-    end,
   },
 
   -- visual-multi
   { "mg979/vim-visual-multi" },
 }
 
--- autocommands
+-- Autocommands
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = { "*.postcss" },
   command = "set filetype=postcss",
 })
 
--- vim config
+-- Vim Config
 vim.cmd "source ~/.vimrc"
