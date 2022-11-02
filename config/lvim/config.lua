@@ -1,3 +1,13 @@
+-- let g:nvim_tree_icons = {
+--   \   "default": "",
+--   \   "folder": {
+--   \     "arrow_open": "▽",
+--   \     "arrow_closed": "▷",
+--   \   },
+--   \ }
+
+-- Put cursor over URL in text, and press `gx` to open.
+
 -- General
 lvim.colorscheme = "catppuccin"
 lvim.format_on_save = true
@@ -38,7 +48,7 @@ lvim.builtin.which_key.mappings.s.F = {
   "<cmd>Telescope oldfiles<cr>", "Open Recent File"
 }
 lvim.builtin.which_key.mappings.s.r = {
-  "<cmd>lua require('spectre').open()<cr>", "Search and Replace"
+  "<cmd>lua require(\"spectre\").open()<cr>", "Search and Replace"
 }
 
 -- Treesitter
@@ -62,8 +72,8 @@ lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- Formatters
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
+local formatters = require("lvim.lsp.null-ls.formatters")
+formatters.setup({
   { command = "beautysh" },
   {
     command = "prettierd",
@@ -82,11 +92,11 @@ formatters.setup {
   { command = "trim_newlines" },
   { command = "trim_whitespace" },
   { command = "xmllint" },
-}
+})
 
 -- Linters
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
+local linters = require("lvim.lsp.null-ls.linters")
+linters.setup({
   {
     command = "eslint_d",
     filetypes = { "javascript", "svelte", "typescript" },
@@ -102,7 +112,7 @@ linters.setup {
   },
   { command = "yamllint" },
   { command = "zsh" },
-}
+})
 
 -- Extra Plugins
 lvim.plugins = {
@@ -139,7 +149,23 @@ lvim.plugins = {
   {
     "windwp/nvim-spectre",
     config = function()
-      require("spectre").setup({})
+      require("spectre").setup()
+    end,
+  },
+
+  -- todo-comments
+  {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup({
+        highlight = {
+          pattern = [[\@?(KEYWORDS)]],
+        },
+        search = {
+          pattern = [[.*(KEYWORDS).*]],
+        },
+      })
     end,
   },
 
@@ -147,6 +173,12 @@ lvim.plugins = {
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
+    config = function()
+      require("trouble").setup({
+        auto_close = true,
+        auto_open = true,
+      })
+    end,
   },
 
   -- visual-multi
