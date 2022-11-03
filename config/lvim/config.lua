@@ -1,6 +1,10 @@
--- Issues? => Restart, :PackerInstall, :PackerCompile, Restart.
+-- LunarVim Config
+--  Changes? => Restart, :PackerInstall, :PackerCompile, Restart.
 
--- General
+-- @TODO: postcss better / real
+-- @TODO: i18n / l10n
+
+-- Settings
 lvim.colorscheme = 'catppuccin'
 lvim.format_on_save = true
 lvim.log.level = 'warn'
@@ -9,6 +13,7 @@ lvim.log.level = 'warn'
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = 'dashboard'
 lvim.builtin.gitsigns.opts.signs.delete.text = lvim.icons.ui.BoldLineLeft
+lvim.builtin.indentlines.options.show_current_context = false
 lvim.builtin.lualine.on_config_done = function(lualine)
   local config = lualine.get_config()
   local lsp = config.sections.lualine_x[2]
@@ -16,7 +21,15 @@ lvim.builtin.lualine.on_config_done = function(lualine)
   lualine.setup(config)
 end
 lvim.builtin.nvimtree.setup.view.side = 'left'
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.nvimtree.setup.renderer.icons = {
+  glyphs = {
+    folder = {
+      arrow_open = '▽',
+      arrow_closed = '▷',
+    },
+  },
+  show = { git = false },
+}
 
 -- Keymappings
 lvim.leader = 'space'
@@ -41,10 +54,19 @@ lvim.builtin.which_key.mappings.s.F = {
   '<cmd>Telescope oldfiles<cr>', 'Open Recent File'
 }
 lvim.builtin.which_key.mappings.s.r = {
-  '<cmd>lua require("spectre").open()<cr>', 'and Replace'
+  [[<cmd>lua require('spectre').open()<cr>]], 'and Replace'
+}
+lvim.builtin.which_key.mappings.t = {
+  name = 'Diagnostics',
+  t = { '<cmd>TroubleToggle<cr>', 'Trouble' },
+  w = { '<cmd>TroubleToggle workspace_diagnostics<cr>', 'Workspace' },
+  d = { '<cmd>TroubleToggle document_diagnostics<cr>', 'Document' },
+  q = { '<cmd>TroubleToggle quickfix<cr>', 'Quickfix' },
+  l = { '<cmd>TroubleToggle loclist<cr>', 'Loclist' },
+  r = { '<cmd>TroubleToggle lsp_references<cr>', 'References' },
 }
 
--- Treesitter
+-- Treesitters
 lvim.builtin.treesitter.ensure_installed = {
   'bash',
   'css',
@@ -54,6 +76,7 @@ lvim.builtin.treesitter.ensure_installed = {
   'html',
   'javascript',
   'json',
+  'lua',
   'markdown',
   'svelte',
   'typescript',
@@ -62,6 +85,25 @@ lvim.builtin.treesitter.ensure_installed = {
 }
 lvim.builtin.treesitter.ignore_install = { 'haskell' }
 lvim.builtin.treesitter.highlight.enabled = true
+
+-- Language Servers
+lvim.lsp.installer.setup.ensure_installed = {
+  'bash-language-server',
+  'css-lsp',
+  'dockerfile-language-server',
+  'eslint_d',
+  'hadolint',
+  'html-lsp',
+  'json-lsp',
+  'lemminx',
+  'lua-language-server',
+  'marksman',
+  'prettierd',
+  'svelte-language-server',
+  'typescript-language-server',
+  'vim-language-server',
+  'yaml-language-server',
+}
 
 -- Formatters
 local formatters = require('lvim.lsp.null-ls.formatters')
@@ -127,7 +169,10 @@ lvim.plugins = {
     config = function()
       require('hop').setup()
       vim.api.nvim_set_keymap(
-        'n', '<leader>h', ':HopWord<cr>', { silent = true }
+        'n', '<leader>h', '<cmd>HopWord<cr>', { silent = true }
+      )
+      vim.api.nvim_set_keymap(
+        'v', '<leader>h', '<cmd>HopWord<cr>', { silent = true }
       )
     end,
   },
@@ -142,14 +187,15 @@ lvim.plugins = {
     end,
   },
 
+  -- minimap
   {
     'wfxr/minimap.vim',
     config = function()
       vim.cmd('let g:minimap_auto_start = 1')
       vim.cmd('let g:minimap_auto_start_win_enter = 1')
-      vim.cmd('let g:minimap_cursor_color = "TablineSel"')
+      vim.cmd([[let g:minimap_cursor_color = 'TablineSel']])
       vim.cmd('let g:minimap_highlight_search = 1')
-      vim.cmd('let g:minimap_range_color = "Tabline"')
+      vim.cmd([[let g:minimap_range_color = 'Tabline']])
       vim.cmd('let g:minimap_width = 10')
     end,
   },
@@ -187,25 +233,8 @@ lvim.plugins = {
     end,
   },
 
-  -- let g:nvim_tree_icons = {
-  --   \   'default': '',
-  --   \   'folder': {
-  --   \     'arrow_open': '▽',
-  --   \     'arrow_closed': '▷',
-  --   \   },
-  --   \ }
-
   -- trouble
-  {
-    'folke/trouble.nvim',
-    cmd = 'TroubleToggle',
-    config = function()
-      require('trouble').setup({
-        auto_close = true,
-        auto_open = true,
-      })
-    end,
-  },
+  { 'folke/trouble.nvim', cmd = 'TroubleToggle' },
 
   -- visual-multi
   { 'mg979/vim-visual-multi' },

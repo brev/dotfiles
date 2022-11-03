@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 npm install --global \
+  @fsouza/prettierd \
   @northflank/cli \
   @railway/cli \
   bash-language-server \
@@ -9,7 +10,6 @@ npm install --global \
   neovim \
   pnpm \
   prettier \
-  @fsouza/prettierd \
   stylelint-lsp \
   svelte-language-server \
   svgo \
