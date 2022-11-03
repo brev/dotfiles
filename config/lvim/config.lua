@@ -1,8 +1,6 @@
 -- LunarVim Config
 --  Changes? => Restart, :PackerInstall, :PackerCompile, Restart.
-
--- @TODO: postcss better / real
--- @TODO: i18n / l10n
+--  @TODO: i18n/l10n postcss
 
 -- Settings
 lvim.colorscheme = 'catppuccin'
