@@ -1,4 +1,6 @@
-# Personal Dotfiles
+# Dotfiles
+
+## Symlinks
 
 Run `./link.sh` script to install symlinks from `$PWD` into your `$HOME` 
 directory.
@@ -12,3 +14,6 @@ cd dotfiles/
 ./link.sh
 ```
 
+## Packages
+
+Global manifests for varying package managers are in `./packages`.
