@@ -169,18 +169,18 @@ lvim.plugins = {
 		end,
 	},
 	-- minimap
-	{
-		"wfxr/minimap.vim",
-		config = function()
-			vim.cmd("let g:minimap_auto_start = 1")
-			vim.cmd("let g:minimap_auto_start_win_enter = 1")
-			vim.cmd("let g:minimap_close_filetypes = ['alpha']")
-			vim.cmd("let g:minimap_cursor_color = 'TablineSel'")
-			vim.cmd("let g:minimap_highlight_search = 1")
-			vim.cmd("let g:minimap_range_color = 'Tabline'")
-			vim.cmd("let g:minimap_width = 10")
-		end,
-	},
+	-- {
+	-- 	"wfxr/minimap.vim",
+	-- 	config = function()
+	-- 		vim.cmd("let g:minimap_auto_start = 1")
+	-- 		vim.cmd("let g:minimap_auto_start_win_enter = 1")
+	-- 		vim.cmd("let g:minimap_close_filetypes = ['alpha']")
+	-- 		vim.cmd("let g:minimap_cursor_color = 'TablineSel'")
+	-- 		vim.cmd("let g:minimap_highlight_search = 1")
+	-- 		vim.cmd("let g:minimap_range_color = 'Tabline'")
+	-- 		vim.cmd("let g:minimap_width = 10")
+	-- 	end,
+	-- },
 	-- postcss
 	{ "stephenway/postcss.vim" },
 	-- postcss-syntax

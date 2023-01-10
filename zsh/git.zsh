@@ -8,6 +8,9 @@ git config --global color.status auto
 # core
 git config --global core.whitespace trailing-space,space-before-tab
 
+# http
+git config --global http.postBuffer 157286400
+
 # init
 git config --global init.defaultBranch main
 

@@ -1,6 +1,17 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "selector-nested-pattern": "^&"
+    "custom-property-empty-line-before": null,
+    "declaration-colon-newline-after": null,
+    "indentation": [2, { "ignore": ["value"] }],
+    "no-descending-specificity": null,
+    "rule-empty-line-before": null,
+    "selector-nested-pattern": "^.*&",
+    "selector-pseudo-class-no-unknown": [
+      true,
+      { "ignorePseudoClasses": ["global"] }
+    ],
+    "string-quotes": "single",
+    "value-list-comma-newline-after": null
   }
 }
