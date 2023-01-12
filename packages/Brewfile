@@ -74,7 +74,6 @@ brew 'zsh'
 ### casks (taps at top)
 cask 'audacity'
 cask 'authy'
-cask 'backblaze'
 cask 'balenaetcher'
 cask 'dbeaver-community'
 #cask 'docker'
