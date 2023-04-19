@@ -73,20 +73,21 @@ brew 'zsh'
 
 ### casks (taps at top)
 cask 'audacity'
-cask 'authy'
-cask 'balenaetcher'
-cask 'dbeaver-community'
+cask 'authy'              # 2FA
+cask 'balenaetcher'       # USB image
+cask 'dbeaver-community'  # SQL UI
 #cask 'docker'
 cask 'firefox'
 cask 'gimp'
 cask 'google-chrome'
 cask 'iterm2'
+cask 'jubler'             # Subtitles
 cask 'lastpass'
 cask 'logseq'
 cask 'obsidian'
-cask 'pika'
+cask 'pika'               # WCAG Contrast
 cask 'rar'
-cask 'rectangle'
+cask 'rectangle'          # Window Manager
 cask 'sketch'
 cask 'vlc'
 cask 'zoom'

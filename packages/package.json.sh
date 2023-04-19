@@ -4,16 +4,16 @@ npm install --global \
 	@johnnymorganz/stylua-bin \
 	@northflank/cli \
 	@railway/cli \
-  @taplo/cli \
-  corepack \
+	@taplo/cli \
+	corepack \
 	eslint_d \
 	jsonlint \
 	markdownlint-cli \
-  neovim \
+	neovim \
 	pnpm \
 	prettier \
-  prettier-plugin-svelte \
+	prettier-plugin-svelte \
 	stylelint \
 	stylelint-config-standard \
 	svgo \
-  tree-sitter-cli
+	tree-sitter-cli

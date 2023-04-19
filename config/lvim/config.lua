@@ -94,11 +94,11 @@ formatters.setup({
 	{ command = "stylua" },
 	-- toml
 	{ command = "taplo" },
-	-- xml
+	-- xml svg
 	{
 		command = "tidy",
 		args = { "--input-xml", "true" },
-		filetypes = { "xml" },
+		filetypes = { "xml", "svg" },
 	},
 })
 
@@ -139,7 +139,7 @@ linters.setup({
 -- Extra Plugins (packer)
 lvim.plugins = {
 	-- catppuccin
-	{ "catppuccin/nvim", as = "catppuccin" },
+	{ "catppuccin/nvim", name = "catppuccin" },
 	-- dark-mode
 	{
 		"f-person/auto-dark-mode.nvim",
@@ -162,25 +162,12 @@ lvim.plugins = {
 	-- markdown-preview
 	{
 		"iamcco/markdown-preview.nvim",
-		run = "cd app && npm install",
+		build = "cd app && npm install",
 		ft = "markdown",
 		config = function()
 			vim.g.mkdp_auto_start = 1
 		end,
 	},
-	-- minimap
-	-- {
-	-- 	"wfxr/minimap.vim",
-	-- 	config = function()
-	-- 		vim.cmd("let g:minimap_auto_start = 1")
-	-- 		vim.cmd("let g:minimap_auto_start_win_enter = 1")
-	-- 		vim.cmd("let g:minimap_close_filetypes = ['alpha']")
-	-- 		vim.cmd("let g:minimap_cursor_color = 'TablineSel'")
-	-- 		vim.cmd("let g:minimap_highlight_search = 1")
-	-- 		vim.cmd("let g:minimap_range_color = 'Tabline'")
-	-- 		vim.cmd("let g:minimap_width = 10")
-	-- 	end,
-	-- },
 	-- postcss
 	{ "stephenway/postcss.vim" },
 	-- postcss-syntax
@@ -221,7 +208,7 @@ lvim.builtin.which_key.mappings.g.S = {
 }
 lvim.builtin.which_key.mappings.h = nil
 lvim.builtin.which_key.mappings.n = {
-	"<cmd>nohlsearch<cr>:call minimap#vim#ClearColorSearch()<cr>",
+	"<cmd>nohlsearch<cr>",
 	"No Highlight",
 }
 lvim.builtin.which_key.mappings.s.F = {
@@ -233,7 +220,7 @@ lvim.builtin.which_key.mappings.s.r = {
 	"and Replace",
 }
 lvim.builtin.which_key.mappings.t = {
-	name = "Diagnostics",
+	name = "Trouble",
 	t = { "<cmd>TroubleToggle<cr>", "Trouble" },
 	w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace" },
 	d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document" },
