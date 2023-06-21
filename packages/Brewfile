@@ -5,6 +5,7 @@
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
+tap 'homebrew/cask-fonts'
 
 ### brews
 brew 'aspell'
@@ -73,21 +74,22 @@ brew 'zsh'
 
 ### casks (taps at top)
 cask 'audacity'
-cask 'authy'              # 2FA
-cask 'balenaetcher'       # USB image
-cask 'dbeaver-community'  # SQL UI
+cask 'authy' # 2FA
+cask 'balenaetcher' # USB image
+cask 'dbeaver-community' # SQL UI
 #cask 'docker'
 cask 'firefox'
+cask 'font-hack-nerd-font' # LunarVim
 cask 'gimp'
 cask 'google-chrome'
 cask 'iterm2'
-cask 'jubler'             # Subtitles
+cask 'jubler' # Subtitles
 cask 'lastpass'
 cask 'logseq'
 cask 'obsidian'
-cask 'pika'               # WCAG Contrast
+cask 'pika' # WCAG Contrast
 cask 'rar'
-cask 'rectangle'          # Window Manager
+cask 'rectangle' # Window Manager
 cask 'sketch'
 cask 'vlc'
 cask 'zoom'

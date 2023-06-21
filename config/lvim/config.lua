@@ -58,7 +58,7 @@ lvim.builtin.treesitter.ensure_installed = {
 local manager = require("lvim.lsp.manager")
 -- servers
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, {
-	"marksman",
+	-- "marksman",
 	"tailwindcss",
 	"taplo",
 }, _, _)
