@@ -1,6 +1,7 @@
 -- LunarVim Config
 --  * Changes? => Restart, :PackerInstall, :PackerCompile, Restart.
 --  * LSP Formatters and Linters to be installed manually.
+--  * @TODO: Markdown LSP (marksman gone)
 --  * @TODO: i18n/l10n (plugin)
 --  * @TODO: postcss (treesitter + lsp)
 
@@ -58,12 +59,9 @@ lvim.builtin.treesitter.ensure_installed = {
 local manager = require("lvim.lsp.manager")
 -- servers
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, {
-	-- "marksman",
 	"tailwindcss",
 	"taplo",
-}, _, _)
--- markdown
-manager.setup("marksman", { filetypes = { "markdown" } })
+}, nil, nil)
 -- toml
 manager.setup("taplo", { filetypes = { "toml" } })
 

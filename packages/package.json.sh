@@ -15,5 +15,7 @@ npm install --global \
 	prettier-plugin-svelte \
 	stylelint \
 	stylelint-config-standard \
+	svelte-language-server \
 	svgo \
-	tree-sitter-cli
+	tree-sitter-cli \
+	typescript-language-server
