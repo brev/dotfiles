@@ -7,10 +7,12 @@ npm install --global \
 	@taplo/cli \
 	corepack \
 	eslint_d \
-	jsonlint \
+  http-server \	
+  jsonlint \
 	markdownlint-cli \
 	neovim \
-	pnpm \
+  node-id3 \	
+  pnpm \
 	prettier \
 	prettier-plugin-svelte \
 	stylelint \

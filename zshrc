@@ -1,8 +1,3 @@
-# powerlevel10k
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # zgen init
 source "${HOME}/.zgen/zgen.zsh"
 
@@ -26,7 +21,6 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/pip
   zgen oh-my-zsh plugins/postgres
   zgen oh-my-zsh plugins/python
-  zgen oh-my-zsh plugins/ripgrep
   zgen oh-my-zsh plugins/sudo
   zgen oh-my-zsh plugins/urltools
   zgen oh-my-zsh plugins/vi-mode

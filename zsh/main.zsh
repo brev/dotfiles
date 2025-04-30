@@ -14,8 +14,12 @@ export LDFLAGS="-L/usr/local/opt/flex/lib $LDFLAGS"
 
 # settings
 export CLICOLOR=1
-export EDITOR=lvim
+export EDITOR=nvim
 export KEYTIMEOUT=1
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export TERM=xterm-256color
+set -g default-terminal "xterm-256color"
 unset LSCOLORS
 
 # system
@@ -27,4 +31,4 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 14  # default 15
 defaults write NSGlobalDomain KeyRepeat -int 1          # default 2
 
 # aliases
-alias grep='grep --color=auto'
+alias grep="grep --color=auto"
