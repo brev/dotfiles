@@ -36,7 +36,7 @@ if ! zgen saved; then
 fi
 
 # custom settings
-for F in $HOME/.dotfiles/zsh/*.zsh; do
+for F in $HOME/.config/brev/zsh/*.zsh; do
   source $F;
 done
 
