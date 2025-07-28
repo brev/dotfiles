@@ -1,8 +1,19 @@
--- Autocmds are automatically loaded on the VeryLazy event
--- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
---
--- Add any additional autocmds here
--- with `vim.api.nvim_create_autocmd`
---
--- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
--- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
+-- Add autocmds here with `vim.api.nvim_create_autocmd`
+-- Remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
+--  e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+-- snacks.dashboard
+-- vim.api.nvim_create_autocmd("BufDelete", {
+-- group = vim.api.nvim_create_augroup("dashboard_no_buffers", { clear = true }),
+-- callback = function(event)
+-- local fallback_name = vim.api.nvim_buf_get_name(event.buf)
+-- local fallback_ft = vim.api.nvim_buf_get_option(event.buf, "filetype")
+-- local fallback_on_empty = fallback_name == "" and fallback_ft == ""
+-- if fallback_on_empty then
+-- require("neo-tree").close_all() Snacks.explorer()
+-- Snacks.dashboard()
+-- vim.cmd(event.buf .. "bwipeout")
+-- end
+-- end,
+-- })

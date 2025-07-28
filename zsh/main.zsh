@@ -32,3 +32,6 @@ defaults write NSGlobalDomain KeyRepeat -int 1          # default 2
 
 # aliases
 alias grep="grep --color=auto"
+alias vi="nvim"
+alias vim="nvim"
+

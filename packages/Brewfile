@@ -1,14 +1,13 @@
-# brew bundle
-#   brew bundle cleanup --force
+# brew bundle (cleanup --force)
 
-### taps (casks at bottom)
+### taps
 tap 'homebrew/bundle'
+tap 'homebrew/cask-fonts'
 tap 'homebrew/core'
 tap 'homebrew/services'
-tap 'homebrew/cask-fonts'
 
 ### brews
-brew 'aspell'
+brew 'aspell'   # spell checker
 brew 'ast-grep'
 brew 'autoconf'
 brew 'autojump'
@@ -16,95 +15,98 @@ brew 'base64'
 brew 'bison'
 brew 'boost'
 brew 'chromaprint'
-brew 'cmake'
-brew 'code-minimap'
-brew 'curl'
-brew 'e2fsprogs'
-brew 'easy-tag'
+brew 'cmake'          # programming language
+brew 'curl'           # web requestor
+brew 'd2'             # diagram generator
+brew 'e2fsprogs'      # hard drive tools
 brew 'f3'
 brew 'fd'
-brew 'ffmpeg', args: ['with-libvpx', 'with-libvorbis']
-brew 'flac'
+brew 'ffmpeg', args: ['with-libvpx', 'with-libvorbis'] # media convertor
+brew 'flac'           # audio format
 brew 'flex'
 brew 'freetype'
-brew 'fzf'
+brew 'fzf'            # filesystem finder
 brew 'gdb'
 brew 'gdbm'
-brew 'gh'
-brew 'gist'
-brew 'git'
+brew 'gh'             # source control tool
+brew 'gist'           # source control tool
+brew 'git'            # source control
 brew 'gnu-sed'
-brew 'go'
-brew 'gpg'
-brew 'hadolint'
-brew 'id3lib'
-brew 'id3v2'
-brew 'imagemagick'
+brew 'go'             # programming language
+brew 'gpg'            # de/encryptor
+brew 'hadolint'       # programming linter
+brew 'id3lib'         # id3 tag library
+brew 'id3v2'          # id3 tag tools
+brew 'imagemagick'    # image editor
 brew 'jless'
-brew 'jpeg'
-brew 'jq'
-brew 'lastpass-cli'
-brew 'lazygit'
-brew 'libogg'
-brew 'libpng'
-brew 'libtiff'
+brew 'jpeg'           # photo format
+brew 'jq'             # json query tool
+brew 'lastpass-cli'   # password manager client
+brew 'lazygit'        # source control tool
+brew 'libogg'         # audio format library
+brew 'libpng'         # photo format library
+brew 'libtiff'        # photo format library
 brew 'libtool'
-brew 'libvorbis'
-brew 'libyaml'
-brew 'llvm'
-brew 'lolcat'
+brew 'libvorbis'      # audio format library
+brew 'libyaml'        # programming language
+brew 'llvm'           # programming language
+brew 'lolcat'         # text colorizer
 brew 'luarocks'
-brew 'neovim'
-brew 'node'
-brew 'openssl'
-brew 'p7zip'
+brew 'neovim'         # text editor and development IDE
+brew 'node'           # programming language
+brew 'openssl'        # de/encryptor
+brew 'p7zip'          # de/compressor
 brew 'pcre'
-brew 'pgcli'
+brew 'pgcli'          # database client
+brew 'pipx'           # python pip safe with homebrew
 brew 'pkg-config'
-brew 'postgresql@14'
-brew 'python'
+brew 'postgresql@14'  # database server
+brew 'python'         # programming language
 brew 'readline'
-brew 'rename'
-brew 'ripgrep'
-brew 'rustup'
-brew 'shellcheck'
-brew 'shfmt'
-brew 'tidy-html5'
-brew 'tree'
+brew 'rename'         # filesystem renamer
+brew 'ripgrep'        # text searcher
+brew 'rustup'         # programming language
+brew 'shellcheck'     # programming linter
+brew 'shfmt'          # programming formatter
+brew 'tidy-html5'     # programming formatter
+brew 'tree'           # filesystem lister
 brew 'up'
 brew 'vint'
-brew 'wget'
-brew 'xz'
-brew 'yamllint'
-brew 'zlib'
-brew 'zsh'
+brew 'wget'           # web requestor
+brew 'xz'             # de/compressor
+brew 'yadm'           # dotfiles
+brew 'yamllint'       # programming linter
+brew 'zlib'           # de/compression library
+brew 'zsh'            # terminal shell
 
 ### casks (taps at top)
-cask 'android-studio'
-cask 'audacity'
-cask 'authy'
-cask 'balenaetcher'
-cask 'dbeaver-community'
-#cask 'docker'
-cask 'eloston-chromium'
-cask 'firefox'
-cask 'font-hack-nerd-font'
-cask 'gimp'
-cask 'hyperbackupexplorer'
-cask 'iina'
-cask 'iterm2'
-cask 'jubler' # subtitles
-cask 'lastpass'
-cask 'logseq'
-cask 'losslesscut'
-cask 'microsoft-edge'
-cask 'obsidian'
-cask 'pika' # contrast
-cask 'plex'
-cask 'plexamp'
-cask 'rar'
-cask 'rectangle'
-cask 'sketch'
-cask 'syncthing'
-cask 'vmware-fusion'
-cask 'zoom'
+cask 'amadine'              # vector illustration editor
+cask 'android-studio'       # android simulator
+cask 'audacity'             # sound editor
+cask 'authy'                # two factor auth
+cask 'balenaetcher'         # image burner
+cask 'dbeaver-community'    # database editor
+#cask 'docker'              # container server
+cask 'firefox'              # web browser
+cask 'font-hack-nerd-font'  # developer font
+cask 'gimp'                 # art/photo editor
+cask 'hyperbackupexplorer'  # synology hyperbackup client
+cask 'iina'                 # network video player
+cask 'iterm2'               # terminal window
+cask 'kid3'                 # id3 tag editor
+cask 'lastpass'             # password manager
+cask 'losslesscut'          # video editor
+cask 'microsoft-edge'       # web browser
+cask 'neovide'              # neovim native app
+#cask 'synology-note-station-client' # synology notes/todos client - manual install to user apps
+cask 'pika'                 # contrast detector
+cask 'plex'                 # media player
+cask 'plexamp'              # music player
+cask 'rar'                  # de/compressor
+cask 'rectangle'            # window manager
+cask 'sketch'               # graphic design editor
+cask 'ungoogled-chromium'   # web browser
+cask 'vlc'                  # media player
+cask 'vmware-fusion'        # virutal machine server
+cask 'zoom'                 # online meeting client
+
