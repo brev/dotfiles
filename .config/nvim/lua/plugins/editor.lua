@@ -22,6 +22,20 @@ return {
     },
   },
 
+  -- cursor * Make insert mode line cursor blink.
+  {
+    "rasulomaroff/cursor.nvim",
+    event = "VeryLazy",
+    opts = {
+      cursors = {
+        {
+          mode = "i",
+          blink = 100,
+        },
+      },
+    },
+  },
+
   -- snacks
   --  * Set a custom width on the file explorer:
   --    https://www.lazyvim.org/configuration/recipes#supertab

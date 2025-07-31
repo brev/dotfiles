@@ -140,12 +140,10 @@ cask 'firefox'
 cask 'microsoft-edge'
 cask 'ungoogled-chromium'
 
-### code
-cask 'android-studio'
+### development
 cask 'dbeaver-community'
-#cask 'docker'
+cask 'font-hack-nerd-font'
 cask 'neovide'
-cask 'vmware-fusion'
 
 ### personal
 cask 'authy'
@@ -156,7 +154,6 @@ cask 'lastpass'
 ### system
 cask 'aerospace'
 cask 'balenaetcher'
-cask 'font-hack-nerd-font'
 cask 'rar'
 #cask 'rectangle'
 
@@ -170,3 +167,10 @@ cask 'losslesscut'
 cask 'plex'
 cask 'vlc'
 cask 'zoom'
+
+### virtual
+#cask 'android-studio'
+#cask 'docker'
+cask 'utm'
+#cask 'vmware-fusion'
+
