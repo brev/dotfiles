@@ -171,6 +171,4 @@ cask 'zoom'
 ### virtual
 #cask 'android-studio'
 #cask 'docker'
-cask 'utm'
-#cask 'vmware-fusion'
 
