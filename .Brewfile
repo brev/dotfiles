@@ -93,6 +93,7 @@ brew 'up' # interact
 brew 'gpg'
 brew 'lastpass-cli'
 brew 'openssl'
+brew 'step'
 
 ### source
 brew 'gh'
@@ -148,6 +149,7 @@ cask 'neovide'
 ### personal
 cask 'authy'
 cask 'hyperbackupexplorer'
+cask 'jumpcut'
 cask 'lastpass'
 #cask 'synology-note-station-client' # manual install to user apps
 
@@ -171,4 +173,4 @@ cask 'zoom'
 ### virtual
 #cask 'android-studio'
 #cask 'docker'
-
+cask 'utm'

@@ -25,6 +25,6 @@ source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
 # zsh custom settings
-for F in $HOME/.config/brev/zsh/*.zsh; do
+for F in $HOME/.config/zsh/*.zsh; do
   source $F;
 done
